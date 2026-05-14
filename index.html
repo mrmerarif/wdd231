@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WDD 231 – Course Home Page | Merari Flores</title>
+  <meta name="description" content="Course home page for WDD 231 by Merari Flores. Includes course list, filters, responsive navigation, and dynamic footer information.">
+  <meta name="author" content="Merari Flores">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"></noscript>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css" fetchpriority="high">
+  <link rel="stylesheet" href="styles/small.css" fetchpriority="high">
+  <link rel="stylesheet" href="styles/larger.css" media="(min-width:48rem)">
+
+  <!-- Scripts -->
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="branding">
+      <img src="images/logo.svg" alt="Site logo" width="48" height="48" fetchpriority="high">
+      <span class="site-name">Merari Flores</span>
+    </div>
+
+    <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav id="primary-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="chamber/">Chamber</a>
+      <a href="final/">Final</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <!-- ABOUT ME + PHOTO SECTION -->
+    <section class="about-photo">
+      <div class="about-me">
+        <h2>About Me</h2>
+        <p>
+          I'm originally from Mexico and I’ve always loved learning new things. Recently I’ve been teaching myself piano and guitar, cooking for my family, playing with my kids, reading, and traveling. I once studied to become a commercial pilot and was close to finishing my aviation degree, but financial challenges made me pause that dream.  
+          <br><br>
+          I’ve traveled to many countries, experienced different cultures and cuisines, and met incredible people along the way. I love web design and drawing, and after earning my computer science degree, I’m now working toward my bachelor’s.
+        </p>
+      </div>
+
+      <div class="student-photo">
+        <h2>Student Photo</h2>
+        <img src="images/profile.webp" alt="Photo of Merari Flores" width="250" height="250">
+      </div>
+    </section>
+
+    <!-- CERTIFICATE COURSES -->
+    <section class="certificate">
+      <h2>Web Certificate Courses</h2>
+
+      <div class="course-filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="cse">CSE</button>
+        <button data-filter="wdd">WDD</button>
+      </div>
+
+      <p class="credits">Total Credits: <span id="total-credits">0</span></p>
+
+      <div id="course-list" class="course-list"></div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://byui.instructure.com" target="_blank">Canvas</a></li>
+        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+        <img src="images/github.svg" alt="GitHub icon" width="28" height="28">
+      </a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+        <img src="images/linkedin.svg" alt="LinkedIn icon" width="28" height="28">
+      </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">
+        <img src="images/instagram.svg" alt="Instagram icon" width="28" height="28">
+      </a>
+    </div>
+
+    <p>&copy; <span id="current-year"></span> Merari Flores • Utah, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>

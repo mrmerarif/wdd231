@@ -1,0 +1,99 @@
+@media (min-width: 48rem) {
+    header {
+      padding: 1.5rem 2rem;
+    }
+  
+    #menu-toggle {
+      display: none;
+    }
+  
+    nav {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      padding: 0;
+      border: none;
+      background: none;
+    }
+  
+    nav a {
+      padding: 0.25rem 0;
+      font-size: 1rem;
+      position: relative;
+    }
+  
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background-color: var(--color-accent);
+      transition: width 0.25s ease;
+    }
+  
+    nav a:hover::after {
+      width: 100%;
+    }
+  
+    nav a.active {
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+  
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+  
+    /* About Me + Photo side by side */
+    .about-photo {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+    }
+  
+    .about-me,
+    .student-photo {
+      padding: 1.5rem;
+    }
+  
+    .student-photo img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      display: block;
+      margin: 1rem auto 0;
+    }
+  
+    /* Certificate Section */
+    .certificate {
+      margin-top: 2rem;
+      padding: 2rem;
+    }
+  
+    .course-list {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+  
+    .resources ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.5rem;
+    }
+  
+    footer {
+      padding: 2rem;
+      font-size: 1rem;
+    }
+  
+    footer .social img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  
