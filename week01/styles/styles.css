@@ -219,12 +219,12 @@ footer p {
 }
 
 /* ============================
-   DARK MODE TOGGLE (Sticky Above Footer)
+   DARK MODE TOGGLE
 ============================ */
 #darkmode-toggle {
-  position: fixed; /* stays visible while scrolling */
+  position: fixed; /* this will stays visible while scrolling */
   right: 25px;
-  bottom: 110px; /* adjust this value to sit just above footer line */
+  bottom: 175px; /* by adjust this value  it will change where the dark mode sit just above footer line */
   background: none;
   border: none;
   cursor: pointer;

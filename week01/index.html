@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WDD231 - Site Header & Navigation</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.svg" alt="site logo" width="1" height="1">
+        <span>Merari Flores — WDD231 Class</span>
+      </div>
+
+      <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+    </div>
+
+    <nav id="nav-bar" class="navigation">
+      <ul>
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Setup Complete!</h1>
+    <h2>Hello! World</h2>
+  </main>
+
+  
+  <button id="darkmode-toggle" aria-label="Toggle dark mode">
+    <img src="images/dark-mode.svg" alt="Dark mode icon">
+  </button>
+
+  <footer>
+    <div class="footer-container">
+
+      <div class="social-icons">
+        <a href="https://github.com/" target="_blank">
+          <img src="images/github.svg" alt="GitHub icon">
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank">
+          <img src="images/linkedin.svg" alt="LinkedIn icon">
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="images/instagram.svg" alt="Instagram icon">
+        </a>
+
+        <a href="https://www.youtube.com/" target="_blank">
+          <img src="images/youtube.svg" alt="YouTube icon">
+        </a>
+      </div>
+
+      <p>&copy; <span id="year"></span> Merari Flores — WDD231</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+
+    </div>
+  </footer>
+
+  <script src="scripts/app.js" defer></script>
+</body>
+</html>
