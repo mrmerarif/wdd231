@@ -27,22 +27,18 @@
     padding: 2rem;
   }
 
-  .hero {
+  .hero-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
   }
 
-  .hero-image {
-    margin-top: 0;
-  }
-
-  .home-grid {
+  .homepage-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .spotlights-grid {
+  .spotlight-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 

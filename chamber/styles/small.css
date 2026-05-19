@@ -1,77 +1,77 @@
-/* ==============================
-   GLOBAL STYLES
-============================== */
-
 :root {
-  --primary-color: #1E293B;
-  --secondary-color: #2B6CB0;
-  --accent-color: #C1121F;
-  --light-color: #F8FAFC;
-  --white: #FFFFFF;
-  --border-color: #E2E8F0;
-  --text-color: #1E293B;
-  --muted-text: #E2E8F0;
-  --dark-border: #0F172A;
-  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.08);
-  --shadow-large: 0 4px 10px rgba(0, 0, 0, 0.1);
 
-  --font-body: "Montserrat", sans-serif;
+  --primary-color: #1e293b;
+  --secondary-color: #2b6cb0;
+  --accent-color: #c1121f;
+  --light-color: #f8fafc;
+  --white-color: #ffffff;
+  --border-color: #e2e8f0;
+  --text-color: #1e293b;
+  --muted-color: #e2e8f0;
+
+  --shadow-style: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+  --main-font: "Montserrat", sans-serif;
 }
+
+/* GLOBAL */
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--main-font);
   background-color: var(--light-color);
   color: var(--text-color);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
-/* ==============================
-   HEADER
-============================== */
+main {
+  padding: 1rem;
+}
+
+main h1,
+main h2,
+main h3 {
+  color: var(--primary-color);
+}
+
+/* HEADER */
 
 header {
   background-color: var(--primary-color);
-  color: var(--white);
+  color: var(--white-color);
   padding: 1rem;
   position: relative;
 }
 
-.site-name {
+.site-title {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 0 0 0.25rem;
 }
 
 .branding p {
-  font-size: 0.9rem;
-  color: var(--muted-text);
-  margin: 0;
+  color: var(--muted-color);
 }
 
-/* ==============================
-   NAVIGATION
-============================== */
-
 #menu-toggle {
-  background: none;
+  background-color: transparent;
   border: none;
-  color: var(--white);
+  color: var(--white-color);
   font-size: 2rem;
-  cursor: pointer;
   position: absolute;
   right: 1rem;
   top: 1rem;
+  cursor: pointer;
 }
+
+/* NAVIGATION */
 
 nav {
   display: none;
@@ -84,213 +84,147 @@ nav.open {
 nav ul {
   list-style: none;
   margin: 0;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
 }
 
 nav ul li a {
   display: block;
   padding: 0.75rem;
-  color: var(--white);
+  color: var(--white-color);
   text-decoration: none;
   border-radius: 4px;
 }
 
 nav ul li a:hover,
-nav ul li a.active {
+.active-link {
   background-color: var(--accent-color);
 }
 
-/* ==============================
-   MAIN
-============================== */
+/* HERO */
 
-main {
-  padding: 1rem;
-}
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 
-main h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-}
+  color: var(--white-color);
 
-/* ==============================
-   HERO
-============================== */
-
-.hero {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: var(--white);
   border-radius: 8px;
+
   padding: 1.5rem;
+
   margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .hero-text h2 {
-  color: var(--white);
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  color: var(--white-color);
 }
 
-.hero-actions {
+.hero-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
 
-.btn-primary,
-.btn-secondary {
+.primary-button,
+.secondary-button {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
+  padding: 0.75rem 1.2rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
 }
 
-.btn-primary {
+.primary-button {
   background-color: var(--accent-color);
-  color: var(--white);
+  color: var(--white-color);
 }
 
-.btn-secondary {
-  background-color: var(--white);
+.secondary-button {
+  background-color: var(--white-color);
   color: var(--primary-color);
 }
 
-/* ==============================
-   COMMON CARDS
-============================== */
+/* CARD STYLES */
 
-.community-info,
-.home-card,
-.spotlight-card,
+.community-section,
+.content-card,
 .membership-levels,
 .visit-counter,
 .discover-content,
-.member-card,
-.card {
-  background-color: var(--white);
+.member-card {
+  background-color: var(--white-color);
+
   border: 1px solid var(--border-color);
+
   border-radius: 8px;
-  box-shadow: var(--shadow-light);
-}
 
-.community-info,
-.home-card,
-.spotlight-card,
-.visit-counter,
-.discover-content,
-.member-card,
-.card {
   padding: 1rem;
-}
 
-.community-info,
-.home-grid,
-.spotlights,
-.membership-levels,
-.join-form-section,
-.visit-counter,
-.discover-content,
-.directory-controls {
   margin-bottom: 1.5rem;
+
+  box-shadow: var(--shadow-style);
 }
 
-/* ==============================
-   HOME PAGE
-============================== */
+/* GRID LAYOUTS */
 
-.home-grid,
-.spotlights-grid,
+.homepage-grid,
+.spotlight-grid,
 .levels-container,
 .discover-gallery {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.home-grid,
-.spotlights-grid,
-.levels-container,
-.discover-gallery {
-  grid-template-columns: 1fr;
-}
+/* WEATHER */
 
-.weather-box {
+.weather-layout {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
 }
 
-.weather-box img {
-  width: 60px;
-  height: 60px;
-}
-
-.weather-info p,
-.member-card p {
+.weather-data p {
   margin: 0.25rem 0;
 }
 
+/* EVENTS */
+
 .events-list {
-  padding-left: 1.2rem;
+  padding-left: 1.25rem;
 }
 
-.text-link {
+.inline-link {
   color: var(--secondary-color);
   text-decoration: none;
   font-weight: 600;
 }
 
-.text-link:hover {
-  text-decoration: underline;
-}
-
-/* ==============================
-   JOIN PAGE
-============================== */
-
-.membership-levels {
-  padding: 1.5rem;
-  max-width: 700px;
-  margin-inline: auto;
-}
-
-.membership-levels h2,
-.discover-content h2 {
-  color: var(--primary-color);
-  text-align: center;
-}
-
-.level-card {
-  background-color: var(--light-color);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.level-card:hover {
-  transform: scale(1.02);
-}
+/* JOIN PAGE */
 
 .join-form-section {
   background-color: var(--primary-color);
-  border: 1px solid var(--dark-border);
+  color: var(--white-color);
   border-radius: 8px;
   padding: 1.5rem;
-  max-width: 700px;
-  margin-inline: auto;
-  box-shadow: var(--shadow-large);
 }
 
-.join-form-section h2 {
-  color: var(--white);
-  text-align: center;
+.join-form-section h2,
+#join-form label {
+  color: var(--white-color);
 }
 
 #join-form {
@@ -299,84 +233,39 @@ main h1 {
   gap: 1rem;
 }
 
-#join-form label {
-  display: flex;
-  flex-direction: column;
-  color: var(--white);
-  font-weight: 600;
-}
-
 #join-form input,
 #join-form textarea,
 #join-form select {
   padding: 0.75rem;
-  border: 1px solid #94A3B8;
   border-radius: 6px;
-  font-size: 1rem;
+  border: 1px solid var(--border-color);
 }
 
-#join-form textarea {
-  resize: vertical;
-}
-
-#join-form input:focus,
-#join-form textarea:focus,
-#join-form select:focus {
-  border-color: var(--secondary-color);
-  outline: none;
-}
-
-.submit-btn {
+.submit-button {
   background-color: var(--accent-color);
-  color: var(--white);
+  color: var(--white-color);
   border: none;
   border-radius: 6px;
   padding: 0.9rem;
   cursor: pointer;
-  font-size: 1rem;
 }
 
-.submit-btn:hover {
+.submit-button:hover {
   background-color: var(--secondary-color);
 }
 
-/* ==============================
-   DISCOVER PAGE
-============================== */
-
-.discover-gallery figure {
-  background-color: var(--light-color);
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  padding: 0.75rem;
-  text-align: center;
-}
-
-.discover-gallery img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-/* ==============================
-   DIRECTORY PAGE
-============================== */
+/* DIRECTORY */
 
 .directory-controls {
   text-align: center;
 }
 
-.view-toggle button {
-  padding: 0.5rem 1rem;
-  margin: 0.25rem;
-  border: 1px solid var(--border-color);
+.view-button {
   background-color: var(--accent-color);
-  color: var(--white);
+  color: var(--white-color);
+  border: none;
+  padding: 0.6rem 1rem;
   border-radius: 4px;
-  cursor: pointer;
-}
-
-.view-toggle button:hover {
-  background-color: var(--secondary-color);
 }
 
 #members-container {
@@ -387,70 +276,19 @@ main h1 {
 
 .member-card {
   text-align: center;
-  overflow: hidden;
 }
 
 .member-card img {
   width: 100%;
   max-width: 150px;
-  border-radius: 4px;
 }
 
-.member-card h3 {
-  color: var(--primary-color);
-}
-
-.list-view .member-card {
-  text-align: left;
-}
-
-.member-info {
-  padding-top: 1rem;
-}
-
-/* ==============================
-   DISCOVER EXTRA
-============================== */
-
-.discover-box {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border: 1px solid #D1D5DB;
-  border-radius: 6px;
-  background-color: #F9FAFB;
-}
-
-.demographics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-}
-
-.demo-card {
-  background-color: var(--white);
-  border: 1px solid #D1D5DB;
-  border-radius: 6px;
-  padding: 0.75rem;
-  text-align: center;
-}
-
-/* ==============================
-   FOOTER
-============================== */
+/* FOOTER */
 
 footer {
   background-color: var(--primary-color);
-  color: var(--white);
+  color: var(--white-color);
   padding: 1rem;
-  text-align: center;
   margin-top: auto;
-  border-top: 1px solid var(--dark-border);
-}
-
-footer p {
-  margin: 0.25rem 0;
-}
-
-.footer-contact p:first-child {
-  font-weight: 700;
+  text-align: center;
 }

@@ -2,29 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <meta name="description" content="Salt Lake City Chamber Directory supporting local businesses, events, and community growth.">
-  <meta name="author" content="Merari Flores">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Salt Lake City Chamber Directory">
-  <meta property="og:description" content="Connect with local businesses, discover events, and join the Salt Lake City Chamber of Commerce.">
-  <meta property="og:type" content="website">
+  <meta
+    name="description"
+    content="Salt Lake City Chamber Directory supporting local businesses and community growth."
+  >
 
-  <!-- IMPORTANT: Replace YOUR-USERNAME with your actual GitHub username -->
-  <meta property="og:image" content="https://YOUR-USERNAME.github.io/wdd231/chamber/images/og-image.png">
+  <meta
+    name="author"
+    content="Merari Flores"
+  >
 
-  <meta property="og:url" content="https://YOUR-USERNAME.github.io/wdd231/chamber/index.html">
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="Salt Lake City Chamber Directory"
+  >
+
+  <meta
+    property="og:description"
+    content="Connect with local businesses, discover events, and join the Salt Lake City Chamber of Commerce."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <!-- IMPORTANT:
+       Replace merariflores with YOUR REAL GitHub username -->
+
+  <meta
+    property="og:image"
+    content="https://merariflores.github.io/wdd231/chamber/images/hero-slc.jpg"
+  >
+
+  <meta
+    property="og:url"
+    content="https://merariflores.github.io/wdd231/chamber/index.html"
+  >
 
   <title>Salt Lake City Chamber Directory | Home</title>
 
-  <link rel="icon" href="images/favicon.ico">
+  <link
+    rel="icon"
+    href="images/favicon.ico"
+  >
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- GOOGLE FONTS -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
@@ -32,13 +74,33 @@
   >
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+
+  <link
+    rel="stylesheet"
+    href="styles/normalize.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles/small.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles/large.css"
+  >
 
   <!-- JS -->
-  <script src="scripts/home.js" defer></script>
-  <script src="scripts/global.js" defer></script>
+
+  <script
+    src="scripts/home.js"
+    defer
+  ></script>
+
+  <script
+    src="scripts/global.js"
+    defer
+  ></script>
 
 </head>
 
@@ -47,21 +109,57 @@
   <header>
 
     <div class="branding">
-      <p class="site-name">Salt Lake City Chamber of Commerce</p>
-      <p>Connecting businesses, community, and opportunity</p>
+
+      <p class="site-title">
+        Salt Lake City Chamber of Commerce
+      </p>
+
+      <p>
+        Connecting businesses, community, and opportunity
+      </p>
+
     </div>
 
-    <button id="menu-toggle" aria-label="Toggle navigation menu">
+    <button
+      id="menu-toggle"
+      aria-label="Toggle navigation menu"
+    >
       ☰
     </button>
 
     <nav id="main-nav">
+
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="join.html">Join</a></li>
+
+        <li>
+          <a
+            href="index.html"
+            class="active-link"
+          >
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="directory.html">
+            Directory
+          </a>
+        </li>
+
+        <li>
+          <a href="discover.html">
+            Discover
+          </a>
+        </li>
+
+        <li>
+          <a href="join.html">
+            Join
+          </a>
+        </li>
+
       </ul>
+
     </nav>
 
   </header>
@@ -70,7 +168,7 @@
 
     <h1>Salt Lake City Chamber Directory</h1>
 
-    <section class="hero">
+    <section class="hero-section">
 
       <div class="hero-text">
 
@@ -81,13 +179,19 @@
           and strengthen our community together.
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-buttons">
 
-          <a href="join.html" class="btn-primary">
+          <a
+            href="join.html"
+            class="primary-button"
+          >
             Join the Chamber
           </a>
 
-          <a href="directory.html" class="btn-secondary">
+          <a
+            href="directory.html"
+            class="secondary-button"
+          >
             Explore the Directory
           </a>
 
@@ -95,9 +199,8 @@
 
       </div>
 
-      <!-- FIXED IMAGE ISSUE -->
       <img
-        class="hero-image"
+        class="hero-photo"
         src="images/hero-slc.jpg"
         alt="Downtown Salt Lake City skyline"
         width="600"
@@ -106,7 +209,7 @@
 
     </section>
 
-    <section class="community-info">
+    <section class="community-section">
 
       <h2>Why Salt Lake City?</h2>
 
@@ -116,20 +219,20 @@
       </p>
 
       <p>
-        The Chamber works to connect business owners,
+        The Chamber connects business owners,
         residents, and visitors with the resources
         they need to succeed.
       </p>
 
     </section>
 
-    <section class="home-grid">
+    <section class="homepage-grid">
 
-      <article class="home-card weather-card">
+      <article class="content-card weather-card">
 
         <h2>Today in Salt Lake City</h2>
 
-        <div class="weather-box">
+        <div class="weather-layout">
 
           <img
             id="weather-icon"
@@ -139,7 +242,7 @@
             height="60"
           >
 
-          <div class="weather-info">
+          <div class="weather-data">
 
             <p>
               <strong>Temperature:</strong>
@@ -167,7 +270,7 @@
 
       </article>
 
-      <article class="home-card events-card">
+      <article class="content-card events-card">
 
         <h2>Upcoming Events</h2>
 
@@ -190,7 +293,10 @@
 
         </ul>
 
-        <a href="discover.html" class="text-link">
+        <a
+          href="discover.html"
+          class="inline-link"
+        >
           View more events
         </a>
 
@@ -198,13 +304,13 @@
 
     </section>
 
-    <section class="spotlights">
+    <section class="spotlight-section">
 
       <h2>Member Spotlights</h2>
 
-      <div class="spotlights-grid">
+      <div class="spotlight-grid">
 
-        <article class="spotlight-card">
+        <article class="content-card">
 
           <h3>Wasatch Mountain Outfitters</h3>
 
@@ -213,13 +319,16 @@
             for every season in the Wasatch Front.
           </p>
 
-          <a href="directory.html" class="text-link">
+          <a
+            href="directory.html"
+            class="inline-link"
+          >
             View in directory
           </a>
 
         </article>
 
-        <article class="spotlight-card">
+        <article class="content-card">
 
           <h3>Great Salt Café</h3>
 
@@ -228,22 +337,28 @@
             in downtown Salt Lake City.
           </p>
 
-          <a href="directory.html" class="text-link">
+          <a
+            href="directory.html"
+            class="inline-link"
+          >
             View in directory
           </a>
 
         </article>
 
-        <article class="spotlight-card">
+        <article class="content-card">
 
           <h3>Downtown Tech Hub</h3>
 
           <p>
-            A collaborative workspace supporting startups
-            and innovators.
+            A collaborative workspace supporting
+            startups and innovators.
           </p>
 
-          <a href="directory.html" class="text-link">
+          <a
+            href="directory.html"
+            class="inline-link"
+          >
             View in directory
           </a>
 
@@ -259,7 +374,11 @@
 
     <section class="footer-contact">
 
-      <p><strong>Salt Lake City Chamber of Commerce</strong></p>
+      <p>
+        <strong>
+          Salt Lake City Chamber of Commerce
+        </strong>
+      </p>
 
       <p>Salt Lake City, Utah</p>
 
