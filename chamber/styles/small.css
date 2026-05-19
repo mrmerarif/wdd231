@@ -35,8 +35,14 @@ main {
   padding: 1rem;
 }
 
-main h1,
-main h2,
+main h1 {
+  color: var(--primary-color);
+}
+
+main h2 {
+  color: var(--primary-color);
+}
+
 main h3 {
   color: var(--primary-color);
 }
