@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Salt Lake City — local attractions, history, demographics, and community insights.">
+  <meta name="author" content="Merari Flores">
+
+  <title>Salt Lake City Chamber | Discover</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <script src="scripts/discover.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="branding">
+      <h1>Salt Lake City Chamber of Commerce</h1>
+      <p>Discover Salt Lake City</p>
+    </div>
+
+    <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    
+    <section class="visit-counter card">
+      <h2>Your Visits</h2>
+      <p id="visit-message">Loading...</p>
+    </section>
+
+    
+    <section class="discover-content card">
+      <h2>Explore Salt Lake City</h2>
+      <p>
+        Salt Lake City is known for its beautiful mountains, vibrant downtown, and rich cultural history. 
+        Explore some of the highlights below.
+      </p>
+
+      
+      <div class="discover-box">
+        <h3>Local History</h3>
+        <p>
+          Founded in 1847, Salt Lake City has grown into a thriving metropolitan area known for its cultural heritage, 
+          outdoor recreation, and innovation. The city blends historic architecture with modern development, 
+          creating a unique environment for residents and visitors alike.
+        </p>
+      </div>
+
+     
+      <div class="discover-box">
+        <h3>Demographics</h3>
+        <div class="demographics-grid">
+          <div class="demo-card"><strong>Population</strong><br>205,000+</div>
+          <div class="demo-card"><strong>Median Age</strong><br>32.4</div>
+          <div class="demo-card"><strong>Median Household Income</strong><br>$80,196</div>
+          <div class="demo-card"><strong>Diversity Index</strong><br>67%</div>
+          <div class="demo-card"><strong>Housing Units</strong><br>90,000+</div>
+        </div>
+      </div>
+
+      
+      <div class="discover-box">
+        <h3>Current Events</h3>
+        <ul>
+          <li><strong>Summer Concert Series</strong> – June 15</li>
+          <li><strong>Farmers Market Opening Day</strong> – June 20</li>
+          <li><strong>Art in the Park Festival</strong> – July 3</li>
+        </ul>
+      </div>
+
+     
+      <div class="discover-gallery">
+        <figure>
+          <img src="images/placeholder.jpg"
+               data-src="images/temple.webp"
+               alt="Temple Square at Christmas"
+               loading="lazy">
+          <figcaption>Temple Square at Christmas</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/placeholder.jpg"
+               data-src="images/attraction.webp"
+               alt="Airplane at Hill Aerospace Museum"
+               loading="lazy">
+          <figcaption>Hill Aerospace Museum</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/placeholder.jpg"
+               data-src="images/magna.webp"
+               alt="View of Salt Lake Valley from Magna Cemetery"
+               loading="lazy">
+          <figcaption>View from Magna Cemetery</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <section class="footer-contact">
+      <p><strong>Salt Lake City Chamber of Commerce</strong></p>
+      <p>Salt Lake City, Utah</p>
+      <p>Email: info@slcchamber.org</p>
+      <p>Phone: (801) 555-1234</p>
+    </section>
+
+    <section class="footer-meta">
+      <p>&copy; <span id="current-year"></span> Salt Lake City Chamber of Commerce</p>
+      <p>WDD 231 | <span id="last-modified"></span></p>
+      <p>Created by Merari Flores</p>
+    </section>
+  </footer>
+
+  <script src="scripts/global.js" defer></script>
+</body>
+</html>

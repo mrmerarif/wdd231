@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Wasatch Mountain Outfitters",
+    "address": "123 Canyon Rd, Salt Lake City, UT",
+    "phone": "(801) 555-1001",
+    "website": "https://wasatchoutfitters.example.com",
+    "image": "images/members/wasatch-mountain-outfitters.webp",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Great Salt Cafe",
+    "address": "456 Main St, Salt Lake City, UT",
+    "phone": "(801) 555-1002",
+    "website": "https://greatsaltcafe.example.com",
+    "image": "images/members/great-salt-cafe.webp",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Downtown Tech Hub",
+    "address": "789 Tech Park Blvd, Salt Lake City, UT",
+    "phone": "(801) 555-1003",
+    "website": "https://downtowntechhub.example.com",
+    "image": "images/members/downtown-tech-hub.webp",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Salt Lake Arts Collective",
+    "address": "22 Gallery Ln, Salt Lake City, UT",
+    "phone": "(801) 555-1004",
+    "website": "https://slcarts.example.com",
+    "image": "images/members/salt-lake-arts-collective.webp",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Beehive Bookstore",
+    "address": "15 Library Sq, Salt Lake City, UT",
+    "phone": "(801) 555-1005",
+    "website": "https://beehivebooks.example.com",
+    "image": "images/members/beehive-bookstore.webp",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Red Rock Fitness",
+    "address": "300 Fitness Dr, Salt Lake City, UT",
+    "phone": "(801) 555-1006",
+    "website": "https://redrockfitness.example.com",
+    "image": "images/members/red-rock-fitness.webp",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Temple View Hotel",
+    "address": "88 Temple View Way, Salt Lake City, UT",
+    "phone": "(801) 555-1007",
+    "website": "https://templeviewhotel.example.com",
+    "image": "images/members/temple-view-hotel.webp",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Jordan River Kayak Tours",
+    "address": "12 Riverfront Rd, Salt Lake City, UT",
+    "phone": "(801) 555-1008",
+    "website": "https://jordankayak.example.com",
+    "image": "images/members/jordan-river-kayak-tours.webp",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Magna Heritage Museum",
+    "address": "50 Heritage Ln, Magna, UT",
+    "phone": "(801) 555-1009",
+    "website": "https://magnamuseum.example.com",
+    "image": "images/members/magna-heritage-museum.webp",
+    "membershipLevel": 1
+  }
+]
