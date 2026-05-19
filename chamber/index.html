@@ -3,33 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Salt Lake City Chamber of Commerce – supporting local businesses, events, and community growth.">
+
+  
+  <meta name="description" content="Salt Lake City Chamber Directory – supporting local businesses, events, and community growth.">
   <meta name="author" content="Merari Flores">
 
-  <meta property="og:title" content="Salt Lake City Chamber of Commerce">
+ 
+  <meta property="og:title" content="Salt Lake City Chamber Directory">
   <meta property="og:description" content="Connect with local businesses, discover events, and join the Salt Lake City Chamber of Commerce.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/og-image.png">
+
+ 
+  <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/og-image.png">
+
   <meta property="og:url" content="https://username.github.io/wdd231/chamber/index.html">
 
-  <title>Salt Lake City Chamber | Home</title>
+  
+  <title>Salt Lake City Chamber Directory | Home</title>
 
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicon.ico">
 
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
+
+
+  <script src="scripts/home.js" defer></script>
+  <script src="scripts/global.js" defer></script>
+
 </head>
 
 <body>
+
   <header>
     <div class="branding">
-      <h1>Salt Lake City Chamber of Commerce</h1>
+      <p class="site-name">Salt Lake City Chamber of Commerce</p>
       <p>Connecting businesses, community, and opportunity</p>
     </div>
 
-    <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    <button id="menu-toggle" aria-label="Toggle navigation menu">
+      ☰
+    </button>
 
     <nav id="main-nav">
       <ul>
@@ -44,110 +68,203 @@
   <main>
 
     
+    <h1>Salt Lake City Chamber Directory</h1>
+
     <section class="hero">
+
       <div class="hero-text">
         <h2>Grow with Salt Lake City</h2>
-        <p>Support local businesses, build partnerships, and strengthen our community together.</p>
+
+        <p>
+          Support local businesses, build partnerships,
+          and strengthen our community together.
+        </p>
+
         <div class="hero-actions">
-          <a href="join.html" class="btn-primary">Join the Chamber</a>
-          <a href="directory.html" class="btn-secondary">Explore the Directory</a>
+          <a href="join.html" class="btn-primary">
+            Join the Chamber
+          </a>
+
+          <a href="directory.html" class="btn-secondary">
+            Explore the Directory
+          </a>
         </div>
       </div>
+
+      
       <div class="hero-image" aria-hidden="true"></div>
+
     </section>
 
-   
     <section class="community-info">
+
       <h2>Why Salt Lake City?</h2>
+
       <p>
-        Salt Lake City is a vibrant hub for business, culture, and outdoor adventure. 
-        From thriving tech startups to long-standing local shops, our community is built 
-        on collaboration, innovation, and quality of life.
+        Salt Lake City is a vibrant hub for business,
+        culture, and outdoor adventure. From thriving
+        tech startups to long-standing local shops,
+        our community is built on collaboration,
+        innovation, and quality of life.
       </p>
+
       <p>
-        The Chamber works to connect business owners, residents, and visitors with the 
-        resources they need to succeed and feel at home in our city.
+        The Chamber works to connect business owners,
+        residents, and visitors with the resources
+        they need to succeed and feel at home in our city.
       </p>
+
     </section>
 
-    
     <section class="home-grid">
 
-     
       <article class="home-card weather-card">
+
         <h2>Today in Salt Lake City</h2>
 
         <div class="weather-box">
-          
-          <img id="weather-icon" src="images/weather.svg" alt="Weather icon">
+
+          <img
+            id="weather-icon"
+            src="images/weather.svg"
+            alt="Weather icon"
+          >
 
           <div class="weather-info">
             <p><strong>Temperature:</strong> <span id="temp">--°F</span></p>
+
             <p><strong>Conditions:</strong> <span id="conditions">--</span></p>
+
             <p><strong>Wind:</strong> <span id="wind">-- mph</span></p>
+
             <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
           </div>
+
         </div>
+
       </article>
 
-      
       <article class="home-card events-card">
+
         <h2>Upcoming Events</h2>
+
         <ul class="events-list">
-          <li><strong>Business Networking Breakfast</strong> – June 5, 8:00 AM</li>
-          <li><strong>Downtown Summer Market</strong> – June 12, 10:00 AM</li>
-          <li><strong>Small Business Workshop</strong> – June 20, 6:00 PM</li>
+          <li>
+            <strong>Business Networking Breakfast</strong>
+            – June 5, 8:00 AM
+          </li>
+
+          <li>
+            <strong>Downtown Summer Market</strong>
+            – June 12, 10:00 AM
+          </li>
+
+          <li>
+            <strong>Small Business Workshop</strong>
+            – June 20, 6:00 PM
+          </li>
         </ul>
-        <a href="discover.html" class="text-link">View more events</a>
+
+        <a href="discover.html" class="text-link">
+          View more events
+        </a>
+
       </article>
 
     </section>
 
-    
     <section class="spotlights">
+
       <h2>Member Spotlights</h2>
 
       <div class="spotlights-grid">
+
         <article class="spotlight-card">
+
           <h3>Wasatch Mountain Outfitters</h3>
-          <p>Outdoor gear and guided adventures for every season in the Wasatch Front.</p>
-          <a href="directory.html" class="text-link">View in directory</a>
+
+          <p>
+            Outdoor gear and guided adventures
+            for every season in the Wasatch Front.
+          </p>
+
+          <a href="directory.html" class="text-link">
+            View in directory
+          </a>
+
         </article>
 
         <article class="spotlight-card">
+
           <h3>Great Salt Café</h3>
-          <p>Locally roasted coffee and fresh pastries in the heart of downtown.</p>
-          <a href="directory.html" class="text-link">View in directory</a>
+
+          <p>
+            Locally roasted coffee and fresh pastries
+            in the heart of downtown.
+          </p>
+
+          <a href="directory.html" class="text-link">
+            View in directory
+          </a>
+
         </article>
 
         <article class="spotlight-card">
+
           <h3>Downtown Tech Hub</h3>
-          <p>A collaborative workspace supporting startups, innovators, and tech professionals.</p>
-          <a href="directory.html" class="text-link">View in directory</a>
+
+          <p>
+            A collaborative workspace supporting startups,
+            innovators, and tech professionals.
+          </p>
+
+          <a href="directory.html" class="text-link">
+            View in directory
+          </a>
+
         </article>
+
       </div>
+
     </section>
 
   </main>
 
   <footer>
+
     <section class="footer-contact">
+
       <p><strong>Salt Lake City Chamber of Commerce</strong></p>
+
       <p>Salt Lake City, Utah</p>
+
       <p>Email: info@slcchamber.org</p>
+
       <p>Phone: (801) 555-1234</p>
+
     </section>
 
     <section class="footer-meta">
-      <p>&copy; <span id="current-year"></span> Salt Lake City Chamber of Commerce</p>
-      <p>WDD 231 | <span id="last-modified"></span></p>
+
+      <p>
+        &copy;
+        <span id="current-year"></span>
+        Salt Lake City Chamber of Commerce
+      </p>
+
+      <p>
+        WDD 231 |
+        <span id="last-modified"></span>
+      </p>
+
       <p>Created by Merari Flores</p>
+
     </section>
+
   </footer>
 
   
-  <script src="scripts/home.js" defer></script>
-  <script src="scripts/global.js" defer></script>
+  
 
 </body>
 </html>

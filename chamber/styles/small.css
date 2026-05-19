@@ -1,114 +1,126 @@
-/* ------------------------------
+/* ==============================
    GLOBAL STYLES
------------------------------- */
+============================== */
 
-html, body {
+:root {
+  --primary-color: #1E293B;
+  --secondary-color: #2B6CB0;
+  --accent-color: #C1121F;
+  --light-color: #F8FAFC;
+  --white: #FFFFFF;
+  --border-color: #E2E8F0;
+  --text-color: #1E293B;
+  --muted-text: #E2E8F0;
+  --dark-border: #0F172A;
+  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-large: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  --font-body: "Montserrat", sans-serif;
+}
+
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: var(--font-body, "Open Sans", sans-serif);
-  background-color: #F8FAFC;
-  color: #1E293B;
+  font-family: var(--font-body);
+  background-color: var(--light-color);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Header */
+/* ==============================
+   HEADER
+============================== */
+
 header {
-  background-color: #1E293B;
-  color: #FFFFFF;
+  background-color: var(--primary-color);
+  color: var(--white);
   padding: 1rem;
   position: relative;
 }
 
-.branding h1 {
+.site-name {
   font-size: 1.5rem;
-  margin-bottom: 0.25rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
 }
 
 .branding p {
   font-size: 0.9rem;
-  color: #E2E8F0;
+  color: var(--muted-text);
+  margin: 0;
 }
 
-/* HAMBURGER BUTTON */
+/* ==============================
+   NAVIGATION
+============================== */
+
 #menu-toggle {
   background: none;
   border: none;
-  color: #FFFFFF;
+  color: var(--white);
   font-size: 2rem;
   cursor: pointer;
   position: absolute;
   right: 1rem;
   top: 1rem;
-  z-index: 9999;
 }
 
-/* Navigation */
 nav {
   display: none;
-}
-
-nav ul {
-  padding: 1rem 0;
-  margin: 0;
-  list-style: none;
-}
-
-nav ul li a {
-  display: block;
-  padding: 0.75rem;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-nav ul li a.active {
-  background-color: #C1121F;
-  color: #FFFFFF;
 }
 
 nav.open {
   display: block;
 }
 
-/* Footer */
-footer {
-  background-color: #1E293B;
-  color: #FFFFFF;
-  padding: 1rem;
-  text-align: center;
-  margin-top: auto;
-  font-size: 0.85rem;
-  border-top: 1px solid #0F172A;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
 }
 
-footer p {
-  margin: 0.25rem 0;
+nav ul li a {
+  display: block;
+  padding: 0.75rem;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
 }
 
-.footer-contact p:first-child {
-  font-weight: 700;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: var(--accent-color);
 }
 
-/* ------------------------------
-   MAIN BASE
------------------------------- */
+/* ==============================
+   MAIN
+============================== */
 
 main {
   padding: 1rem;
 }
 
-/* ------------------------------
-   HOME PAGE (Mobile)
------------------------------- */
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* ==============================
+   HERO
+============================== */
 
 .hero {
-  background: linear-gradient(135deg, #1E293B, #2B6CB0);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -118,12 +130,9 @@ main {
 }
 
 .hero-text h2 {
+  color: var(--white);
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
-}
-
-.hero-text p {
-  margin-bottom: 1rem;
 }
 
 .hero-actions {
@@ -139,77 +148,99 @@ main {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
 }
 
 .btn-primary {
-  background-color: #C1121F;
-  color: #FFFFFF;
+  background-color: var(--accent-color);
+  color: var(--white);
 }
 
 .btn-secondary {
-  background-color: #FFFFFF;
-  color: #1E293B;
+  background-color: var(--white);
+  color: var(--primary-color);
 }
 
-.community-info {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
+/* ==============================
+   COMMON CARDS
+============================== */
+
+.community-info,
+.home-card,
+.spotlight-card,
+.membership-levels,
+.visit-counter,
+.discover-content,
+.member-card,
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 1.25rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-light);
 }
 
-.community-info h2 {
-  margin-bottom: 0.75rem;
-}
-
-/* Home grid: Weather + Events */
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.home-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
+.community-info,
+.home-card,
+.spotlight-card,
+.visit-counter,
+.discover-content,
+.member-card,
+.card {
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
-.home-card h2 {
-  margin-bottom: 0.75rem;
+.community-info,
+.home-grid,
+.spotlights,
+.membership-levels,
+.join-form-section,
+.visit-counter,
+.discover-content,
+.directory-controls {
+  margin-bottom: 1.5rem;
 }
 
-/* Weather card */
-.weather-card .weather-box {
+/* ==============================
+   HOME PAGE
+============================== */
+
+.home-grid,
+.spotlights-grid,
+.levels-container,
+.discover-gallery {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-grid,
+.spotlights-grid,
+.levels-container,
+.discover-gallery {
+  grid-template-columns: 1fr;
+}
+
+.weather-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
 }
 
-.weather-card .weather-box img {
+.weather-box img {
   width: 60px;
   height: 60px;
 }
 
-.weather-card .weather-info p {
+.weather-info p,
+.member-card p {
   margin: 0.25rem 0;
 }
 
-/* Events card */
 .events-list {
   padding-left: 1.2rem;
-  margin: 0 0 0.75rem 0;
 }
 
 .text-link {
-  color: #2B6CB0;
+  color: var(--secondary-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -218,90 +249,48 @@ main {
   text-decoration: underline;
 }
 
-/* Spotlights */
-.spotlights {
-  margin-bottom: 1.5rem;
-}
-
-.spotlights h2 {
-  margin-bottom: 1rem;
-}
-
-.spotlights-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.spotlight-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-/* ------------------------------
-   JOIN PAGE (Mobile)
------------------------------- */
+/* ==============================
+   JOIN PAGE
+============================== */
 
 .membership-levels {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
   padding: 1.5rem;
-  margin: 1.5rem auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   max-width: 700px;
+  margin-inline: auto;
 }
 
-.membership-levels h2 {
+.membership-levels h2,
+.discover-content h2 {
+  color: var(--primary-color);
   text-align: center;
-  margin-bottom: 1rem;
-  color: #1E293B;
-}
-
-.levels-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
 }
 
 .level-card {
-  background-color: #F8FAFC;
-  border: 1px solid #E2E8F0;
+  background-color: var(--light-color);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .level-card:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.level-card h3 {
-  color: #1E293B;
-  margin-bottom: 0.5rem;
-}
-
-/* Join form */
 .join-form-section {
-  background-color: #1E293B;
-  border: 1px solid #0F172A;
+  background-color: var(--primary-color);
+  border: 1px solid var(--dark-border);
   border-radius: 8px;
   padding: 1.5rem;
-  margin: 1.5rem auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   max-width: 700px;
+  margin-inline: auto;
+  box-shadow: var(--shadow-large);
 }
 
 .join-form-section h2 {
+  color: var(--white);
   text-align: center;
-  margin-bottom: 1rem;
-  color: #FFFFFF;
 }
 
 #join-form {
@@ -313,8 +302,8 @@ main {
 #join-form label {
   display: flex;
   flex-direction: column;
+  color: var(--white);
   font-weight: 600;
-  color: #FFFFFF;
 }
 
 #join-form input,
@@ -324,9 +313,6 @@ main {
   border: 1px solid #94A3B8;
   border-radius: 6px;
   font-size: 1rem;
-  background-color: #FFFFFF;
-  color: #1E293B;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 #join-form textarea {
@@ -336,60 +322,34 @@ main {
 #join-form input:focus,
 #join-form textarea:focus,
 #join-form select:focus {
-  border-color: #2B6CB0;
+  border-color: var(--secondary-color);
   outline: none;
 }
 
 .submit-btn {
-  background-color: #C1121F;
-  color: #FFFFFF;
-  padding: 0.9rem;
+  background-color: var(--accent-color);
+  color: var(--white);
   border: none;
   border-radius: 6px;
-  font-size: 1.1rem;
+  padding: 0.9rem;
   cursor: pointer;
-  margin-top: 0.5rem;
-  text-align: center;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
 }
 
 .submit-btn:hover {
-  background-color: #2B6CB0;
+  background-color: var(--secondary-color);
 }
 
-/* ------------------------------
-   DISCOVER PAGE (Mobile)
------------------------------- */
-
-.visit-counter,
-.discover-content {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 6px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.discover-content h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #1E293B;
-}
-
-.discover-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
+/* ==============================
+   DISCOVER PAGE
+============================== */
 
 .discover-gallery figure {
-  background-color: #F8FAFC;
-  border: 1px solid #E2E8F0;
+  background-color: var(--light-color);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 0.75rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .discover-gallery img {
@@ -397,45 +357,37 @@ main {
   border-radius: 4px;
 }
 
-/* ------------------------------
-   DIRECTORY PAGE (Mobile)
------------------------------- */
+/* ==============================
+   DIRECTORY PAGE
+============================== */
 
 .directory-controls {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .view-toggle button {
   padding: 0.5rem 1rem;
   margin: 0.25rem;
-  border: 1px solid #E2E8F0;
-  background-color: #C1121F;
-  color: #FFFFFF;
-  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background-color: var(--accent-color);
+  color: var(--white);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .view-toggle button:hover {
-  background-color: #2B6CB0;
+  background-color: var(--secondary-color);
 }
 
 #members-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-
-  
-  min-height: 1200px;
 }
 
 .member-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 6px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   text-align: center;
+  overflow: hidden;
 }
 
 .member-card img {
@@ -445,41 +397,60 @@ main {
 }
 
 .member-card h3 {
-  margin: 0.5rem 0;
-  color: #1E293B;
-}
-
-.member-card p {
-  margin: 0.25rem 0;
-  font-size: 0.9rem;
+  color: var(--primary-color);
 }
 
 .list-view .member-card {
   text-align: left;
 }
 
-/* MEMBER CARDS */
-.member-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 320px;
-  min-height: 420px;
-  border-radius: 12px;
-  overflow: hidden;
-  background: white;
-}
-
-/* IMAGE */
-.member-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-/* CONTENT */
 .member-info {
+  padding-top: 1rem;
+}
+
+/* ==============================
+   DISCOVER EXTRA
+============================== */
+
+.discover-box {
+  margin-top: 1.5rem;
   padding: 1rem;
-  flex-grow: 1;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  background-color: #F9FAFB;
+}
+
+.demographics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.demo-card {
+  background-color: var(--white);
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+  border-top: 1px solid var(--dark-border);
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+.footer-contact p:first-child {
+  font-weight: 700;
 }
