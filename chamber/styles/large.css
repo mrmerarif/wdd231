@@ -1,7 +1,3 @@
-/* ==============================
-   LARGE SCREEN STYLES
-============================== */
-
 @media (min-width: 700px) {
 
   header {
@@ -16,7 +12,7 @@
   }
 
   nav {
-    display: block !important;
+    display: block;
   }
 
   nav ul {
@@ -25,43 +21,22 @@
     padding: 0;
   }
 
-  nav ul li a {
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
-  }
-
-  nav ul li a:hover {
-    background-color: var(--secondary-color);
-  }
-
   main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
   }
 
-  /* HERO */
-
   .hero {
     display: grid;
-    grid-template-columns: 2fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     align-items: center;
-    padding: 2rem 2.5rem;
-  }
-
-  .hero-text h2 {
-    font-size: 2rem;
   }
 
   .hero-image {
-    min-height: 250px;
-    border-radius: 8px;
-    background:
-      url("../images/hero-slc.jpg")
-      center / cover no-repeat;
+    margin-top: 0;
   }
-
-  /* HOME */
 
   .home-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -71,78 +46,31 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* JOIN */
-
-  .membership-levels {
-    max-width: 1000px;
-  }
-
   .levels-container {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .join-form-section {
-    max-width: 700px;
-  }
-
-  .submit-btn {
-    width: 100%;
-  }
-
-  /* DISCOVER */
-
-  .visit-counter,
-  .discover-content,
-  .card {
-    max-width: 1000px;
-    margin-inline: auto;
   }
 
   .discover-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .discover-gallery figure {
-    padding: 1rem;
-  }
-
-  .discover-gallery img {
-    max-height: 220px;
-    object-fit: cover;
-  }
-
-  /* DIRECTORY */
-
-  .directory-controls {
-    max-width: 1000px;
-    margin-inline: auto;
-  }
-
   #members-container.grid-view {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1000px;
-    margin-inline: auto;
-  }
-
-  #members-container.list-view {
-    display: block;
-    max-width: 1000px;
-    margin-inline: auto;
   }
 
   .list-view .member-card {
     display: flex;
     align-items: center;
     gap: 1rem;
+    text-align: left;
   }
 
   .list-view .member-card img {
-    max-width: 100px;
+    max-width: 120px;
   }
-
-  /* FOOTER */
 
   footer {
     padding: 1.5rem;
   }
+
 }
