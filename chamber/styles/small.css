@@ -40,7 +40,7 @@ main h1 {
 }
 
 main h2 {
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 main h3 {
