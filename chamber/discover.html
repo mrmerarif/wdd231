@@ -3,10 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover Salt Lake City — local attractions, history, demographics, and community insights.">
+  <meta name="description" content="Discover Salt Lake City with local history, demographics, attractions, and community insights from the Chamber of Commerce.">
   <meta name="author" content="Merari Flores">
 
-  <title>Salt Lake City Chamber | Discover</title>
+  <title>Salt Lake City Chamber Directory | Discover</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Salt Lake City Chamber Directory – Discover Salt Lake City">
+  <meta property="og:description" content="Explore Salt Lake City’s history, demographics, attractions, and community highlights with the Salt Lake City Chamber of Commerce.">
+  <meta property="og:image" content="https://mrmerarif.github.io/WDD231/chamber/images/og-image.png">
+  <meta property="og:url" content="https://mrmerarif.github.io/WDD231/chamber/discover.html">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts (match home page) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
@@ -18,7 +33,7 @@
 <body>
   <header>
     <div class="branding">
-      <h1>Salt Lake City Chamber of Commerce</h1>
+      <h2>Salt Lake City Chamber of Commerce</h2>
       <p>Discover Salt Lake City</p>
     </div>
 
@@ -35,34 +50,37 @@
   </header>
 
   <main>
+    <!-- Required single H1 inside main -->
+    <h1>Salt Lake City Chamber Directory – Discover</h1>
 
-    
-    <section class="visit-counter card">
-      <h2>Your Visits</h2>
-      <p id="visit-message">Loading...</p>
-    </section>
+    <section class="discover-layout">
+      <!-- Compact visits box -->
+      <section class="visit-counter">
+        <h2>Your Visits</h2>
+        <p id="visit-message">Loading...</p>
+      </section>
 
-    
-    <section class="discover-content card">
-      <h2>Explore Salt Lake City</h2>
-      <p>
-        Salt Lake City is known for its beautiful mountains, vibrant downtown, and rich cultural history. 
-        Explore some of the highlights below.
-      </p>
-
-      
-      <div class="discover-box">
-        <h3>Local History</h3>
+      <!-- Explore Salt Lake City (left box) -->
+      <section class="discover-intro">
+        <h2>Explore Salt Lake City</h2>
         <p>
-          Founded in 1847, Salt Lake City has grown into a thriving metropolitan area known for its cultural heritage, 
-          outdoor recreation, and innovation. The city blends historic architecture with modern development, 
-          creating a unique environment for residents and visitors alike.
+          Salt Lake City is known for its beautiful mountains, vibrant downtown, and rich cultural history.
+          Explore some of the highlights below.
         </p>
-      </div>
 
-     
-      <div class="discover-box">
-        <h3>Demographics</h3>
+        <div class="discover-box">
+          <h3>Local History</h3>
+          <p>
+            Founded in 1847, Salt Lake City has grown into a thriving metropolitan area known for its cultural heritage,
+            outdoor recreation, and innovation. The city blends historic architecture with modern development,
+            creating a unique environment for residents and visitors alike.
+          </p>
+        </div>
+      </section>
+
+      <!-- Demographics (right box) -->
+      <section class="discover-demographics">
+        <h2>Demographics</h2>
         <div class="demographics-grid">
           <div class="demo-card"><strong>Population</strong><br>205,000+</div>
           <div class="demo-card"><strong>Median Age</strong><br>32.4</div>
@@ -70,46 +88,45 @@
           <div class="demo-card"><strong>Diversity Index</strong><br>67%</div>
           <div class="demo-card"><strong>Housing Units</strong><br>90,000+</div>
         </div>
-      </div>
+      </section>
 
-      
-      <div class="discover-box">
-        <h3>Current Events</h3>
+      <!-- Current Events (full-width box) -->
+      <section class="discover-events">
+        <h2>Current Events</h2>
         <ul>
           <li><strong>Summer Concert Series</strong> – June 15</li>
           <li><strong>Farmers Market Opening Day</strong> – June 20</li>
           <li><strong>Art in the Park Festival</strong> – July 3</li>
         </ul>
-      </div>
+      </section>
 
-     
-      <div class="discover-gallery">
+      <!-- Image gallery (own row, 3 columns) -->
+      <section class="discover-gallery">
         <figure>
-          <img src="images/placeholder.jpg"
-               data-src="images/temple.webp"
-               alt="Temple Square at Christmas"
-               loading="lazy">
+          <img
+            src="images/temple.webp"
+            alt="Temple Square at Christmas"
+            loading="lazy">
           <figcaption>Temple Square at Christmas</figcaption>
         </figure>
 
         <figure>
-          <img src="images/placeholder.jpg"
-               data-src="images/attraction.webp"
-               alt="Airplane at Hill Aerospace Museum"
-               loading="lazy">
+          <img
+            src="images/attraction.webp"
+            alt="Airplane at Hill Aerospace Museum"
+            loading="lazy">
           <figcaption>Hill Aerospace Museum</figcaption>
         </figure>
 
         <figure>
-          <img src="images/placeholder.jpg"
-               data-src="images/magna.webp"
-               alt="View of Salt Lake Valley from Magna Cemetery"
-               loading="lazy">
+          <img
+            src="images/magna.webp"
+            alt="View of Salt Lake Valley from Magna Cemetery"
+            loading="lazy">
           <figcaption>View from Magna Cemetery</figcaption>
         </figure>
-      </div>
+      </section>
     </section>
-
   </main>
 
   <footer>

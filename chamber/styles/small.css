@@ -1,5 +1,4 @@
 :root {
-
   --primary-color: #1e293b;
   --secondary-color: #2b6cb0;
   --accent-color: #c1121f;
@@ -21,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -31,8 +31,16 @@ body {
   flex-direction: column;
 }
 
+/* ensure headings default to dark text on light backgrounds */
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+}
+
 main {
   padding: 1rem;
+  flex: 1 0 auto;
 }
 
 main h1 {
@@ -114,18 +122,15 @@ nav ul li a:hover,
     var(--primary-color),
     var(--secondary-color)
   );
-
   color: var(--white-color);
-
   border-radius: 8px;
-
   padding: 1.5rem;
-
   margin-bottom: 1.5rem;
 }
 
 .hero-text h2 {
   color: var(--white-color);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-photo {
@@ -151,6 +156,9 @@ nav ul li a:hover,
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .primary-button {
@@ -158,29 +166,32 @@ nav ul li a:hover,
   color: var(--white-color);
 }
 
+.primary-button:hover {
+  background-color: var(--secondary-color);
+}
+
 .secondary-button {
   background-color: var(--white-color);
   color: var(--primary-color);
 }
 
-/* CARD STYLES */
+.secondary-button:hover {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+/* CARD STYLES (outer sections) */
 
 .community-section,
 .content-card,
-.membership-levels,
 .visit-counter,
 .discover-content,
 .member-card {
   background-color: var(--white-color);
-
-  border: 1px solid var(--border-color);
-
+  border: 1px solid #1e293b;
   border-radius: 8px;
-
   padding: 1rem;
-
   margin-bottom: 1.5rem;
-
   box-shadow: var(--shadow-style);
 }
 
@@ -226,6 +237,9 @@ nav ul li a:hover,
   color: var(--white-color);
   border-radius: 8px;
   padding: 1.5rem;
+  border: 1px solid #1e293b;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .join-form-section h2,
@@ -237,6 +251,9 @@ nav ul li a:hover,
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
 }
 
 #join-form input,
@@ -244,26 +261,47 @@ nav ul li a:hover,
 #join-form select {
   padding: 0.75rem;
   border-radius: 6px;
-  border: 1px solid var(--border-color);
+  border: 1px solid #1e293b;
+  width: 100%;
+  max-width: 500px;
 }
 
 .submit-button {
   background-color: var(--accent-color);
   color: var(--white-color);
   border: none;
-  border-radius: 6px;
-  padding: 0.9rem;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .submit-button:hover {
   background-color: var(--secondary-color);
 }
 
+/* MEMBERSHIP LEVEL BOXES (each level its own box) */
+
+.membership-levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.membership-levels > * {
+  background-color: var(--white-color);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-style);
+}
+
 /* DIRECTORY */
 
 .directory-controls {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .view-button {
@@ -272,21 +310,136 @@ nav ul li a:hover,
   border: none;
   padding: 0.6rem 1rem;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 #members-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
 .member-card {
   text-align: center;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--white-color);
+  box-shadow: var(--shadow-style);
 }
 
 .member-card img {
   width: 100%;
   max-width: 150px;
+  border-radius: 6px;
+}
+
+/* DISCOVER PAGE */
+
+.discover-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* compact visits box */
+.visit-counter {
+  max-width: 420px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  background-color: var(--white-color);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-style);
+}
+
+/* individual boxes like directory cards */
+.discover-intro,
+.discover-demographics,
+.discover-events {
+  background-color: var(--white-color);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-style);
+}
+
+/* demographics grid inside its own box */
+.demographics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.demo-card {
+  background-color: var(--light-color);
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #1e293b;
+}
+
+/* image gallery boxes */
+
+.discover-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.discover-gallery figure {
+  background-color: var(--white-color);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: var(--shadow-style);
+  margin: 0;
+  text-align: center;
+}
+
+.discover-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.discover-gallery figcaption {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* responsive layout for discover cards */
+@media (min-width: 768px) {
+  .discover-layout {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "visits visits visits"
+      "intro demo events"
+      "gallery gallery gallery";
+  }
+
+  .visit-counter {
+    grid-area: visits;
+  }
+
+  .discover-intro {
+    grid-area: intro;
+  }
+
+  .discover-demographics {
+    grid-area: demo;
+  }
+
+  .discover-events {
+    grid-area: events;
+  }
+
+  .discover-gallery {
+    grid-area: gallery;
+  }
 }
 
 /* FOOTER */
@@ -297,4 +450,5 @@ footer {
   padding: 1rem;
   margin-top: auto;
   text-align: center;
+  flex-shrink: 0;
 }
