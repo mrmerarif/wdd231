@@ -37,6 +37,11 @@ h3 {
   color: var(--primary-color);
 }
 
+/* ⭐ FIX: Home page h2 contrast */
+.home-main h2 {
+  color: var(--primary-color) !important;
+}
+
 main {
   padding: 1rem;
   flex: 1 0 auto;
@@ -280,8 +285,6 @@ nav ul li a:hover,
   font-weight: 600;
 }
 
-
-
 .directory-controls {
   text-align: center;
   margin-bottom: 1rem;
@@ -297,7 +300,6 @@ nav ul li a:hover,
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 .view-button.active,
 .view-button.active-view {
@@ -439,8 +441,6 @@ nav ul li a:hover,
   }
 }
 
-
-
 .primary-button,
 .secondary-button,
 .submit-button,
@@ -470,8 +470,6 @@ footer {
   text-align: center;
   flex-shrink: 0;
 }
-
-
 
 .membership-heading {
   text-align: center;
@@ -514,7 +512,7 @@ footer {
   }
 }
 
-
+/* VISUALLY HIDDEN (WCAG safe) */
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
