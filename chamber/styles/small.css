@@ -31,7 +31,6 @@ body {
   flex-direction: column;
 }
 
-
 h1,
 h2,
 h3 {
@@ -58,7 +57,7 @@ main h3 {
   color: var(--primary-color);
 }
 
-
+/* HEADER */
 
 header {
   background-color: var(--primary-color);
@@ -66,7 +65,6 @@ header {
   padding: 1rem;
   position: relative;
 }
-
 
 header h1,
 header h2,
@@ -168,7 +166,6 @@ nav ul li a:hover,
   font-weight: 600;
 }
 
-/* base styles */
 .primary-button {
   background-color: var(--accent-color);
   color: var(--white-color);
@@ -179,7 +176,7 @@ nav ul li a:hover,
   color: var(--primary-color);
 }
 
-/* CARD STYLES (outer sections) */
+/* CARD STYLES */
 
 .community-section,
 .content-card,
@@ -229,7 +226,7 @@ nav ul li a:hover,
   font-weight: 600;
 }
 
-/* JOIN PAGE (base) */
+/* JOIN PAGE */
 
 .join-form-section {
   background-color: var(--primary-color);
@@ -256,6 +253,13 @@ nav ul li a:hover,
   align-items: center;
 }
 
+#join-form label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: 600;
+}
+
 #join-form input,
 #join-form textarea,
 #join-form select {
@@ -278,23 +282,6 @@ nav ul li a:hover,
 
 
 
-.membership-levels {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.membership-levels > * {
-  background-color: var(--white-color);
-  border: 1px solid #1e293b;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: var(--shadow-style);
-}
-
-/* DIRECTORY */
-
 .directory-controls {
   text-align: center;
   margin-bottom: 1rem;
@@ -309,6 +296,13 @@ nav ul li a:hover,
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.view-button.active,
+.view-button.active-view {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
 }
 
 .view-button:hover {
@@ -373,8 +367,8 @@ nav ul li a:hover,
   border-radius: 8px;
   padding: 1rem;
   box-shadow: var(--shadow-style);
+  margin-bottom: 2rem;
 }
-
 
 .demographics-grid {
   display: grid;
@@ -390,8 +384,6 @@ nav ul li a:hover,
   text-align: center;
   border: 1px solid #1e293b;
 }
-
-
 
 .discover-gallery {
   display: grid;
@@ -421,12 +413,13 @@ nav ul li a:hover,
   font-weight: 600;
 }
 
-/* responsive layout for discover cards */
 @media (min-width: 768px) {
   .discover-layout {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "intro demo events";
+    column-gap: 2rem;
+    row-gap: 2rem;
   }
 
   .discover-intro {
@@ -467,7 +460,7 @@ nav ul li a:hover,
   color: var(--white-color);
 }
 
-
+/* FOOTER */
 
 footer {
   background-color: var(--primary-color);
@@ -479,6 +472,7 @@ footer {
 }
 
 
+
 .membership-heading {
   text-align: center;
   font-size: 1.6rem;
@@ -487,7 +481,6 @@ footer {
   color: var(--primary-color);
 }
 
-/* Membership cards row layout */
 .membership-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -512,4 +505,11 @@ footer {
 .level-card p {
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+/* Membership mobile stacking */
+@media (max-width: 767px) {
+  .membership-row {
+    grid-template-columns: 1fr;
+  }
 }
