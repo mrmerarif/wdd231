@@ -1,8 +1,5 @@
-
-
 // Cache container reference
 const container = document.getElementById("members-container");
-
 
 let membersData = [];
 
@@ -18,7 +15,7 @@ async function getMembers() {
     }
 
     membersData = await response.json();
-    displayGridView(); 
+    displayGridView();
 
   } catch (error) {
     console.error("Error loading members:", error);
@@ -52,16 +49,17 @@ function createMemberCard(member) {
   img.src = member.image;
   img.alt = `${member.name} logo`;
 
-  
+  // PERFORMANCE
   img.loading = "lazy";
   img.decoding = "async";
 
   
-  img.width = 200;
-  img.height = 140;
-
- 
-  img.sizes = "(max-width: 768px) 160px, 200px";
+  img.width = 300;
+  img.height = 200;
+  img.style.aspectRatio = "3 / 2";
+  img.style.width = "100%";
+  img.style.height = "auto";
+  img.style.display = "block";
 
   const name = document.createElement("h3");
   name.textContent = member.name;
@@ -113,6 +111,9 @@ function displayGridView() {
   container.classList.remove("list-view");
   container.classList.add("grid-view");
 
+  document.getElementById("grid-view").classList.add("active-view");
+  document.getElementById("list-view").classList.remove("active-view");
+
   const fragment = document.createDocumentFragment();
 
   membersData.forEach((member) => {
@@ -129,6 +130,9 @@ function displayListView() {
   container.innerHTML = "";
   container.classList.remove("grid-view");
   container.classList.add("list-view");
+
+  document.getElementById("list-view").classList.add("active-view");
+  document.getElementById("grid-view").classList.remove("active-view");
 
   const fragment = document.createDocumentFragment();
 
