@@ -3,10 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Join the Salt Lake City Chamber of Commerce. Membership levels, benefits, and application form.">
-  <meta name="author" content="Salt Lake City Chamber">
+  <meta name="description" content="Join the Salt Lake City Chamber Directory. Explore membership levels, benefits, and apply to become part of our business community.">
+  <meta name="author" content="Salt Lake City Chamber of Commerce">
 
-  <title>Salt Lake City Chamber | Join</title>
+  <title>Salt Lake City Chamber Directory | Join</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Salt Lake City Chamber Directory – Join the Chamber">
+  <meta property="og:description" content="Become a member of the Salt Lake City Chamber Directory. Explore membership levels, benefits, and apply online to join our business community.">
+  <meta property="og:image" content="https://mrmerarif.github.io/wdd231/chamber/images/og-image.webp">
+  <meta property="og:url" content="https://mrmerarif.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
@@ -16,10 +31,9 @@
 </head>
 
 <body>
-
   <header>
     <div class="branding">
-      <h1>Salt Lake City Chamber of Commerce</h1>
+      <h2>Salt Lake City Chamber of Commerce</h2>
       <p>Membership Application</p>
     </div>
 
@@ -30,83 +44,47 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="discover.html">Discover</a></li>
-        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="join.html" class="active-link">Join</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <h1>Salt Lake City Chamber Directory</h1>
 
-    <section class="membership-levels">
-      <h2>Membership Levels</h2>
-
-      <div class="levels-container">
-
-        <div class="level-card">
-          <h3>NP Membership</h3>
-          <p>For non‑profit organizations. Includes directory listing and event access.</p>
-        </div>
-
-        <div class="level-card">
-          <h3>Bronze Membership</h3>
-          <p>Includes directory listing, event access, and basic advertising opportunities.</p>
-        </div>
-
-        <div class="level-card">
-          <h3>Silver Membership</h3>
-          <p>Includes all Bronze benefits plus enhanced advertising and networking perks.</p>
-        </div>
-
-        <div class="level-card">
-          <h3>Gold Membership</h3>
-          <p>Includes all Silver benefits plus premium placement and sponsorship options.</p>
-        </div>
-
+    <!-- Membership Levels -->
+    <h2 class="membership-heading">Membership Levels</h2>
+    <section class="membership-row">
+      <div class="level-card">
+        <h3>NP Membership</h3>
+        <p>For non‑profit organizations. Includes directory listing and event access.</p>
+      </div>
+      <div class="level-card">
+        <h3>Bronze Membership</h3>
+        <p>Includes directory listing, event access, and basic advertising opportunities.</p>
+      </div>
+      <div class="level-card">
+        <h3>Silver Membership</h3>
+        <p>Includes all Bronze benefits plus enhanced advertising and networking perks.</p>
+      </div>
+      <div class="level-card">
+        <h3>Gold Membership</h3>
+        <p>Includes all Silver benefits plus premium placement and sponsorship options.</p>
       </div>
     </section>
 
+    <!-- Application Form -->
     <section class="join-form-section">
       <h2>Apply for Membership</h2>
-
       <form id="join-form" method="get" action="thankyou.html">
-
-        <label>
-          First Name:
-          <input type="text" name="firstName" required>
-        </label>
-
-        <label>
-          Last Name:
-          <input type="text" name="lastName" required>
-        </label>
-
-        <label>
-          Business / Organization Name:
-          <input type="text" name="organization" required>
-        </label>
-
-        <label>
-          Title / Position:
-          <input type="text" name="title">
-        </label>
-
-        <label>
-          Email:
-          <input type="email" name="email" required>
-        </label>
-
-        <label>
-          Phone:
-          <input type="tel" name="phone" required>
-        </label>
-
-        <label>
-          Business Description:
-          <textarea name="description" rows="4" required></textarea>
-        </label>
-
-        <label>
-          Membership Level:
+        <label>First Name:<input type="text" name="firstName" required></label>
+        <label>Last Name:<input type="text" name="lastName" required></label>
+        <label>Business / Organization Name:<input type="text" name="organization" required></label>
+        <label>Title / Position:<input type="text" name="title"></label>
+        <label>Email:<input type="email" name="email" required></label>
+        <label>Phone:<input type="tel" name="phone" required></label>
+        <label>Business Description:<textarea name="description" rows="4" required></textarea></label>
+        <label>Membership Level:
           <select name="membership" required>
             <option value="">Select a level</option>
             <option value="np">NP Membership</option>
@@ -115,14 +93,10 @@
             <option value="gold">Gold Membership</option>
           </select>
         </label>
-
         <input type="hidden" id="timestamp" name="timestamp">
-
-        <button type="submit" class="submit-btn">Submit Application</button>
-
+        <button type="submit" class="primary-button">Submit Application</button>
       </form>
     </section>
-
   </main>
 
   <footer>
@@ -132,17 +106,14 @@
       <p>Email: info@slcchamber.org</p>
       <p>Phone: (801) 555-1234</p>
     </section>
-  
+
     <section class="footer-meta">
       <p>&copy; <span id="current-year"></span> Salt Lake City Chamber of Commerce</p>
       <p>WDD 231 | <span id="last-modified"></span></p>
       <p>Created by Merari Flores</p>
     </section>
   </footer>
-  
 
-  
   <script src="scripts/global.js" defer></script>
-
 </body>
 </html>

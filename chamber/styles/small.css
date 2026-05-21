@@ -479,3 +479,134 @@ footer {
   text-align: center;
   flex-shrink: 0;
 }
+
+
+
+/* JOIN PAGE IMPROVEMENTS */
+
+/* Center and enlarge title */
+main h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Membership levels in one row, four columns */
+.levels-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.level-card {
+  background-color: var(--white-color);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-style);
+  text-align: center;
+}
+
+.level-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Form styling */
+.join-form-section {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-style);
+}
+
+.join-form-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--white-color);
+}
+
+#join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+#join-form label {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+#join-form input,
+#join-form textarea,
+#join-form select {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #1e293b;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+/* CTA button matches home page */
+.primary-button {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+/* JOIN PAGE FINAL POLISH */
+
+/* Membership heading standalone (no box) */
+.membership-heading {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Membership cards row layout */
+.membership-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.level-card {
+  background-color: var(--white-color);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-style);
+  text-align: center;
+}
+
+.level-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.level-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
