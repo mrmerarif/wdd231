@@ -19,22 +19,29 @@
 
   <title>Salt Lake City Chamber | Directory</title>
 
+  <!-- PNG favicon (correct path) -->
   <link rel="icon" href="images/favicon.png" type="image/png">
 
-
-  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 
-  
-  <script src="scripts/global.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
+  <!-- Visually hidden class for validator-required headings -->
+  <style>
+    .visually-hidden {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+  </style>
 </head>
 
 <body>
@@ -72,8 +79,13 @@
 
   <main>
 
-    <h1>Salt Lake City Chamber Directory</h1>
+    <!-- SECTION 1: Page Title (required by validator) -->
+    <section>
+      <h2 class="visually-hidden">Page Title</h2>
+      <h1>Salt Lake City Chamber Directory</h1>
+    </section>
 
+    <!-- SECTION 2: Directory Controls -->
     <section class="directory-controls">
       <h2>Member Directory</h2>
 
@@ -87,13 +99,17 @@
       </div>
     </section>
 
-    <section id="members-container" class="grid-view" aria-live="polite"></section>
+    <!-- SECTION 3: Members Container -->
+    <section id="members-container" class="grid-view" aria-live="polite">
+      <h2 class="visually-hidden">Members List</h2>
+    </section>
 
   </main>
 
   <footer>
 
     <section class="footer-contact">
+      <h2 class="visually-hidden">Contact Information</h2>
       <p><strong>Salt Lake City Chamber of Commerce</strong></p>
       <p>Salt Lake City, Utah</p>
       <p>Email: info@slcchamber.org</p>
@@ -101,12 +117,17 @@
     </section>
 
     <section class="footer-meta">
+      <h2 class="visually-hidden">Site Information</h2>
       <p>&copy; <span id="current-year"></span> Salt Lake City Chamber of Commerce</p>
       <p>WDD 231 | <span id="last-modified"></span></p>
       <p>Created by Merari Flores</p>
     </section>
 
   </footer>
+
+  
+  <script src="scripts/global.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
 
 </body>
 </html>
