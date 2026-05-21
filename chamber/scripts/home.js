@@ -1,6 +1,3 @@
-// ===============================
-// This is my Home Page Weather Script
-// ===============================
 
 // ----- Static Weather Data -----
 const temperature = 82; // °F

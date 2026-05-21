@@ -1,4 +1,3 @@
-// This is my global.js that is shared across all pages
 
 const menuToggle = document.querySelector('#menu-toggle');
 const mainNav = document.querySelector('#main-nav');
