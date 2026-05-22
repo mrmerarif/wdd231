@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="robots" content="index, follow">
-  <meta name="description" content="Salt Lake City Chamber of Commerce business directory. Browse local members, services, and organizations.">
-  <meta name="author" content="Merari Flores">
-  <link rel="canonical" href="https://mrmerarif.github.io/wdd231/chamber/directory.html">
 
+  <meta
+    name="description"
+    content="Salt Lake City Chamber of Commerce business directory. Browse local members, services, and organizations."
+  >
+
+  <meta name="author" content="Merari Flores">
+
+  <link
+    rel="canonical"
+    href="https://mrmerarif.github.io/wdd231/chamber/directory.html"
+  >
+
+  
   <meta property="og:title" content="Salt Lake City Chamber Directory">
-  <meta property="og:description" content="Explore the Salt Lake City Chamber of Commerce member directory and discover local businesses.">
+  <meta
+    property="og:description"
+    content="Explore the Salt Lake City Chamber of Commerce member directory and discover local businesses."
+  >
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://mrmerarif.github.io/wdd231/chamber/images/og-image.png">
-  <meta property="og:url" content="https://mrmerarif.github.io/wdd231/chamber/directory.html">
+
+  <meta
+    property="og:image"
+    content="https://mrmerarif.github.io/wdd231/chamber/images/og-image.png"
+  >
+
+  <meta
+    property="og:url"
+    content="https://mrmerarif.github.io/wdd231/chamber/directory.html"
+  >
 
   <title>Salt Lake City Chamber | Directory</title>
 
+ 
   <link rel="icon" href="images/favicon.png" type="image/png">
 
-  <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-        as="style">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-        media="print"
-        onload="this.media='all'">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
-  <link rel="preload" href="styles/normalize.css" as="style">
-  <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.media='all'">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+  >
 
-  <link rel="preload" href="styles/small.css" as="style">
-  <link rel="stylesheet" href="styles/small.css" media="print" onload="this.media='all'">
+ 
+  <link rel="stylesheet" href="styles/normalize.css">
 
-  <link rel="preload" href="styles/large.css" as="style">
-  <link rel="stylesheet" href="styles/large.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="styles/small.css">
 
+  <link
+    rel="stylesheet"
+    href="styles/large.css"
+    media="screen and (min-width: 768px)"
+  >
+
+ 
+  <noscript>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+  </noscript>
+
+  
   <script src="scripts/global.js" defer></script>
   <script src="scripts/directory.js" defer></script>
 
@@ -45,7 +83,9 @@
 
 <body>
 
+  
   <header>
+
     <div class="branding">
       <h2>Salt Lake City Chamber of Commerce Directory</h2>
       <p>Business Directory</p>
@@ -53,6 +93,7 @@
 
     <button
       id="menu-toggle"
+      type="button"
       aria-label="Toggle navigation menu"
       aria-expanded="false"
       aria-controls="main-nav"
@@ -60,64 +101,124 @@
       ☰
     </button>
 
-    <nav id="main-nav">
+    <nav id="main-nav" aria-label="Primary Navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
 
         <li>
-          <a href="directory.html" class="active" aria-current="page">
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a
+            href="directory.html"
+            class="active"
+            aria-current="page"
+          >
             Directory
           </a>
         </li>
 
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="join.html">Join</a></li>
+        <li>
+          <a href="discover.html">Discover</a>
+        </li>
+
+        <li>
+          <a href="join.html">Join</a>
+        </li>
+
       </ul>
     </nav>
+
   </header>
 
+  
   <main>
 
-    <section>
-      <h2 class="visually-hidden">Page Title</h2>
+    
+    <section class="page-heading">
       <h1>Salt Lake City Chamber Directory</h1>
     </section>
 
+   
     <section class="directory-controls">
+
       <h2>Member Directory</h2>
 
       <div class="view-toggle">
-        <button id="grid-view" class="view-button" type="button" aria-label="Show members in grid view">
+
+        <button
+          id="grid-view"
+          class="view-button"
+          type="button"
+          aria-label="Show members in grid view"
+        >
           Grid
         </button>
-        <button id="list-view" class="view-button" type="button" aria-label="Show members in list view">
+
+        <button
+          id="list-view"
+          class="view-button"
+          type="button"
+          aria-label="Show members in list view"
+        >
           List
         </button>
+
       </div>
+
     </section>
 
-    <section id="members-container" class="grid-view" aria-live="polite">
+    
+    <section
+      id="members-container"
+      class="grid-view"
+      aria-live="polite"
+    >
+
       <h2 class="visually-hidden">Members List</h2>
+
       <div class="loading-skeleton"></div>
+
     </section>
 
   </main>
 
+  
   <footer>
 
     <section class="footer-contact">
+
       <h2 class="visually-hidden">Contact Information</h2>
-      <p><strong>Salt Lake City Chamber of Commerce</strong></p>
+
+      <p>
+        <strong>Salt Lake City Chamber of Commerce</strong>
+      </p>
+
       <p>Salt Lake City, Utah</p>
+
       <p>Email: info@slcchamber.org</p>
+
       <p>Phone: (801) 555-1234</p>
+
     </section>
 
     <section class="footer-meta">
+
       <h2 class="visually-hidden">Site Information</h2>
-      <p>&copy; <span id="current-year"></span> Salt Lake City Chamber of Commerce</p>
-      <p>WDD 231 | <span id="last-modified"></span></p>
+
+      <p>
+        &copy;
+        <span id="current-year"></span>
+        Salt Lake City Chamber of Commerce
+      </p>
+
+      <p>
+        WDD 231 |
+        <span id="last-modified"></span>
+      </p>
+
       <p>Created by Merari Flores</p>
+
     </section>
 
   </footer>
