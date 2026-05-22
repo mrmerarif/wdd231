@@ -54,7 +54,6 @@ function createMemberCard(member) {
   img.src = member.image;
   img.alt = `${member.name} logo`;
 
-  // PERFORMANCE BOOSTERS
   img.loading = "lazy";
   img.decoding = "async";
   img.fetchPriority = "low";
@@ -111,18 +110,18 @@ function createMemberRow(member) {
 // Display GRID View
 // ===============================
 function displayGridView() {
-  container.innerHTML = "";
-  container.classList.remove("list-view");
-  container.classList.add("grid-view");
-
-  document.getElementById("grid-view").classList.add("active-view");
-  document.getElementById("list-view").classList.remove("active-view");
-
   const fragment = document.createDocumentFragment();
 
   membersData.forEach((member) => {
     fragment.appendChild(createMemberCard(member));
   });
+
+  container.innerHTML = ""; 
+  container.classList.remove("list-view");
+  container.classList.add("grid-view");
+
+  document.getElementById("grid-view").classList.add("active-view");
+  document.getElementById("list-view").classList.remove("active-view");
 
   container.appendChild(fragment);
 }
@@ -131,18 +130,18 @@ function displayGridView() {
 // Display LIST View
 // ===============================
 function displayListView() {
-  container.innerHTML = "";
-  container.classList.remove("grid-view");
-  container.classList.add("list-view");
-
-  document.getElementById("list-view").classList.add("active-view");
-  document.getElementById("grid-view").classList.remove("active-view");
-
   const fragment = document.createDocumentFragment();
 
   membersData.forEach((member) => {
     fragment.appendChild(createMemberRow(member));
   });
+
+  container.innerHTML = ""; 
+  container.classList.remove("grid-view");
+  container.classList.add("list-view");
+
+  document.getElementById("list-view").classList.add("active-view");
+  document.getElementById("grid-view").classList.remove("active-view");
 
   container.appendChild(fragment);
 }
