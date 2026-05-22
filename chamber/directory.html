@@ -5,12 +5,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO -->
   <meta name="robots" content="index, follow">
   <meta name="description" content="Salt Lake City Chamber of Commerce business directory. Browse local members, services, and organizations.">
   <meta name="author" content="Merari Flores">
-
   <link rel="canonical" href="https://mrmerarif.github.io/wdd231/chamber/directory.html">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Salt Lake City Chamber Directory">
   <meta property="og:description" content="Explore the Salt Lake City Chamber of Commerce member directory and discover local businesses.">
   <meta property="og:type" content="website">
@@ -19,22 +20,26 @@
 
   <title>Salt Lake City Chamber | Directory</title>
 
- 
   <link rel="icon" href="images/favicon.png" type="image/png">
 
- 
+  <!-- PERFORMANCE: Preconnect + Preload Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
- 
+  <!-- Preload Montserrat to avoid render-blocking -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_0t29fL0Ue6x.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Load font async -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 
+  <!-- JS (deferred) -->
   <script src="scripts/global.js" defer></script>
   <script src="scripts/directory.js" defer></script>
-
 
 </head>
 
@@ -73,13 +78,13 @@
 
   <main>
 
-   
+    <!-- Page Title -->
     <section>
       <h2 class="visually-hidden">Page Title</h2>
       <h1>Salt Lake City Chamber Directory</h1>
     </section>
 
-    
+    <!-- Directory Controls -->
     <section class="directory-controls">
       <h2>Member Directory</h2>
 
@@ -93,7 +98,7 @@
       </div>
     </section>
 
-   
+    <!-- Members Container -->
     <section id="members-container" class="grid-view" aria-live="polite">
       <h2 class="visually-hidden">Members List</h2>
     </section>
@@ -118,9 +123,6 @@
     </section>
 
   </footer>
-
- 
-  
 
 </body>
 </html>

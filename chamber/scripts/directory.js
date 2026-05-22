@@ -4,18 +4,27 @@ const container = document.getElementById("members-container");
 let membersData = [];
 
 // ===============================
-// Fetch Members JSON
+// Fetch Members JSON (with caching)
 // ===============================
 async function getMembers() {
   try {
-    const response = await fetch("data/members.json");
+    const cacheKey = "members-cache-v1";
+    const cached = localStorage.getItem(cacheKey);
 
-    if (!response.ok) {
-      throw new Error("Failed to load member data.");
+    if (cached) {
+      membersData = JSON.parse(cached);
+      displayGridView();
     }
 
-    membersData = await response.json();
-    displayGridView();
+    const response = await fetch("data/members.json", { cache: "no-store" });
+
+    if (response.ok) {
+      const freshData = await response.json();
+      membersData = freshData;
+      localStorage.setItem(cacheKey, JSON.stringify(freshData));
+
+      displayGridView();
+    }
 
   } catch (error) {
     console.error("Error loading members:", error);
@@ -27,14 +36,10 @@ async function getMembers() {
 // ===============================
 function mapMembership(level) {
   switch (level) {
-    case 1:
-      return "Member";
-    case 2:
-      return "Silver";
-    case 3:
-      return "Gold";
-    default:
-      return "Member";
+    case 1: return "Member";
+    case 2: return "Silver";
+    case 3: return "Gold";
+    default: return "Member";
   }
 }
 
@@ -49,17 +54,16 @@ function createMemberCard(member) {
   img.src = member.image;
   img.alt = `${member.name} logo`;
 
-  // PERFORMANCE
+  // PERFORMANCE BOOSTERS
   img.loading = "lazy";
   img.decoding = "async";
+  img.fetchPriority = "low";
 
-  
   img.width = 300;
   img.height = 200;
   img.style.aspectRatio = "3 / 2";
-  img.style.width = "100%";
-  img.style.height = "auto";
-  img.style.display = "block";
+  img.style.objectFit = "cover";
+  img.style.background = "#e2e8f0";
 
   const name = document.createElement("h3");
   name.textContent = member.name;
