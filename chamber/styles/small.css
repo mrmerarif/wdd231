@@ -33,6 +33,7 @@ body {
 }
 
 /* GLOBAL HEADINGS */
+
 h1,
 h2,
 h3 {
@@ -129,13 +130,13 @@ nav ul li a:hover,
     var(--primary-color),
     var(--secondary-color)
   );
-  color: var(--white-color);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* FIXED CONTRAST ISSUE */
+/* HERO HEADINGS ONLY */
+
 .hero-heading,
 .hero-text h2,
 .hero-text h3 {
@@ -143,10 +144,23 @@ nav ul li a:hover,
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* FIXED CONTRAST ISSUE */
-.hero-text p,
-.hero-section p {
-  color: var(--white-color);
+/* HERO PARAGRAPHS ONLY */
+
+.hero-text p {
+  color: var(--white-color) !important;
+}
+
+/* NORMAL CONTENT PARAGRAPHS */
+
+.community-section p,
+.content-card p,
+.discover-content p,
+.discover-intro p,
+.discover-demographics p,
+.discover-events p,
+.level-card p,
+.visit-counter p {
+  color: var(--primary-color) !important;
 }
 
 .hero-photo {
@@ -200,6 +214,7 @@ nav ul li a:hover,
 }
 
 /* FORCE NORMAL H2 CONTRAST */
+
 .community-section h2,
 .content-card h2,
 .visit-counter h2,
@@ -376,7 +391,7 @@ nav ul li a:hover,
 .visit-counter p {
   margin: 0;
   font-size: 1rem;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 .discover-intro,
@@ -524,6 +539,7 @@ footer {
 }
 
 /* Membership mobile stacking */
+
 @media (max-width: 767px) {
   .membership-row {
     grid-template-columns: 1fr;
@@ -531,6 +547,7 @@ footer {
 }
 
 /* VISUALLY HIDDEN (WCAG-safe) */
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -542,4 +559,5 @@ footer {
   clip-path: inset(50%) !important;
   border: 0 !important;
   white-space: nowrap !important;
+  left: -9999px !important;
 }
