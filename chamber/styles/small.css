@@ -137,16 +137,17 @@ nav ul li a:hover,
   margin-bottom: 1.5rem;
 }
 
-/* Only hero headings are white (not all text) */
+/* FIXED CONTRAST ISSUE */
+.hero-heading,
 .hero-text h2,
 .hero-text h3 {
   color: var(--white-color);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Hero paragraphs use normal dark text to satisfy contrast tools */
-.hero-section p {
-  color: var(--light-color);
+/* FIXED CONTRAST ISSUE */
+.hero-text p {
+  color: var(--white-color);
 }
 
 .hero-photo {
@@ -529,6 +530,4 @@ footer {
   clip-path: inset(50%) !important;
   border: 0 !important;
   white-space: nowrap !important;
-  color: transparent !important;
-  background-color: transparent !important;
 }
