@@ -38,7 +38,7 @@ h3 {
   color: var(--primary-color);
 }
 
-/* ⭐ FIX: Home page h2 contrast */
+/* Home page h2 contrast helper */
 .home-main h2:not(.visually-hidden) {
   color: var(--primary-color) !important;
 }
@@ -142,7 +142,7 @@ nav ul li a:hover,
   margin-bottom: 1.5rem;
 }
 
-.hero-text h2 {
+.hero-text h3 {
   color: var(--white-color);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -513,7 +513,7 @@ footer {
   }
 }
 
-/* VISUALLY HIDDEN (WCAG safe) */
+/* VISUALLY HIDDEN (WCAG-safe) */
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -525,8 +525,6 @@ footer {
   clip-path: inset(50%) !important;
   border: 0 !important;
   white-space: nowrap !important;
-
-  /* Prevent Lighthouse contrast false positives */
   color: transparent !important;
   background-color: transparent !important;
 }
