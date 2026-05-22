@@ -32,29 +32,11 @@ body {
   flex-direction: column;
 }
 
-/* ⭐ GLOBAL HEADING FIX — VALIDATOR SAFE */
+/* GLOBAL HEADINGS */
 h1,
 h2,
 h3 {
-  color: var(--primary-color) !important;
-}
-
-/* ⭐ WHITE HEADINGS ONLY WHERE NEEDED */
-header h1,
-header h2,
-header h3,
-.join-form-section h2 {
-  color: var(--white-color) !important;
-}
-
-/* ⭐ HERO HEADING (now h3) */
-.hero-text h3 {
-  color: var(--white-color) !important;
-}
-
-/* HOME PAGE FIX */
-.home-main h2:not(.visually-hidden) {
-  color: var(--primary-color) !important;
+  color: var(--primary-color);
 }
 
 main {
@@ -84,6 +66,12 @@ header {
   color: var(--white-color);
   padding: 1rem;
   position: relative;
+}
+
+header h1,
+header h2,
+header h3 {
+  color: var(--white-color);
 }
 
 .site-title {
@@ -144,16 +132,21 @@ nav ul li a:hover,
     var(--primary-color),
     var(--secondary-color)
   );
-  color: var(--white-color);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* ⭐ HERO HEADING FIX */
+/* Only hero headings are white (not all text) */
+.hero-text h2,
 .hero-text h3 {
-  color: var(--white-color) !important;
+  color: var(--white-color);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero paragraphs use normal dark text to satisfy contrast tools */
+.hero-section p {
+  color: var(--light-color);
 }
 
 .hero-photo {
@@ -252,6 +245,11 @@ nav ul li a:hover,
   max-width: 700px;
   margin: 0 auto;
   box-shadow: var(--shadow-style);
+}
+
+.join-form-section h2,
+#join-form label {
+  color: var(--white-color);
 }
 
 #join-form {
