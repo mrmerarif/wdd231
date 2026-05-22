@@ -32,13 +32,27 @@ body {
   flex-direction: column;
 }
 
+/* ⭐ GLOBAL HEADING FIX — VALIDATOR SAFE */
 h1,
 h2,
 h3 {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
-/* Home page h2 contrast helper */
+/* ⭐ WHITE HEADINGS ONLY WHERE NEEDED */
+header h1,
+header h2,
+header h3,
+.join-form-section h2 {
+  color: var(--white-color) !important;
+}
+
+/* ⭐ HERO HEADING (now h3) */
+.hero-text h3 {
+  color: var(--white-color) !important;
+}
+
+/* HOME PAGE FIX */
 .home-main h2:not(.visually-hidden) {
   color: var(--primary-color) !important;
 }
@@ -70,12 +84,6 @@ header {
   color: var(--white-color);
   padding: 1rem;
   position: relative;
-}
-
-header h1,
-header h2,
-header h3 {
-  color: var(--white-color);
 }
 
 .site-title {
@@ -142,8 +150,9 @@ nav ul li a:hover,
   margin-bottom: 1.5rem;
 }
 
+/* ⭐ HERO HEADING FIX */
 .hero-text h3 {
-  color: var(--white-color);
+  color: var(--white-color) !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -245,11 +254,6 @@ nav ul li a:hover,
   box-shadow: var(--shadow-style);
 }
 
-.join-form-section h2,
-#join-form label {
-  color: var(--white-color);
-}
-
 #join-form {
   display: flex;
   flex-direction: column;
@@ -285,6 +289,8 @@ nav ul li a:hover,
   cursor: pointer;
   font-weight: 600;
 }
+
+/* DIRECTORY */
 
 .directory-controls {
   text-align: center;
