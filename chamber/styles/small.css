@@ -1,3 +1,4 @@
+/* ROOT VARIABLES */
 :root {
   --primary-color: #1e293b;
   --secondary-color: #2b6cb0;
@@ -38,7 +39,7 @@ h3 {
 }
 
 /* ⭐ FIX: Home page h2 contrast */
-.home-main h2 {
+.home-main h2:not(.visually-hidden) {
   color: var(--primary-color) !important;
 }
 
@@ -524,4 +525,8 @@ footer {
   clip-path: inset(50%) !important;
   border: 0 !important;
   white-space: nowrap !important;
+
+  /* Prevent Lighthouse contrast false positives */
+  color: transparent !important;
+  background-color: transparent !important;
 }
