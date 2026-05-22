@@ -5,13 +5,11 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
   <meta name="robots" content="index, follow">
   <meta name="description" content="Salt Lake City Chamber of Commerce business directory. Browse local members, services, and organizations.">
   <meta name="author" content="Merari Flores">
   <link rel="canonical" href="https://mrmerarif.github.io/wdd231/chamber/directory.html">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Salt Lake City Chamber Directory">
   <meta property="og:description" content="Explore the Salt Lake City Chamber of Commerce member directory and discover local businesses.">
   <meta property="og:type" content="website">
@@ -22,18 +20,15 @@
 
   <link rel="icon" href="images/favicon.png" type="image/png">
 
-  <!-- ⭐ FIXED: Correct Google Fonts Preload -->
   <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
         as="style">
 
-  <!-- ⭐ FIXED: Async non‑blocking font load -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
         media="print"
         onload="this.media='all'">
 
-  <!-- ⭐ FIXED: NON‑BLOCKING CSS -->
   <link rel="preload" href="styles/normalize.css" as="style">
   <link rel="stylesheet" href="styles/normalize.css" media="print" onload="this.media='all'">
 
@@ -43,7 +38,6 @@
   <link rel="preload" href="styles/large.css" as="style">
   <link rel="stylesheet" href="styles/large.css" media="print" onload="this.media='all'">
 
-  <!-- JS -->
   <script src="scripts/global.js" defer></script>
   <script src="scripts/directory.js" defer></script>
 
@@ -104,6 +98,7 @@
 
     <section id="members-container" class="grid-view" aria-live="polite">
       <h2 class="visually-hidden">Members List</h2>
+      <div class="loading-skeleton"></div>
     </section>
 
   </main>
