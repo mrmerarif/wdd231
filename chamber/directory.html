@@ -22,22 +22,23 @@
 
   <link rel="icon" href="images/favicon.png" type="image/png">
 
-  <!-- PERFORMANCE: Preconnect + Preload Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ⭐ FIXED: Correct Google Fonts Preload -->
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+        as="style">
 
-  <!-- Preload Montserrat to avoid render-blocking -->
-  <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_0t29fL0Ue6x.woff2" as="font" type="font/woff2" crossorigin>
-
-  <!-- Load font async -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <!-- ⭐ FIXED: Async non‑blocking font load -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+        media="print"
+        onload="this.media='all'">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 
-  <!-- JS (deferred) -->
+  <!-- JS -->
   <script src="scripts/global.js" defer></script>
   <script src="scripts/directory.js" defer></script>
 
@@ -78,13 +79,11 @@
 
   <main>
 
-    <!-- Page Title -->
     <section>
       <h2 class="visually-hidden">Page Title</h2>
       <h1>Salt Lake City Chamber Directory</h1>
     </section>
 
-    <!-- Directory Controls -->
     <section class="directory-controls">
       <h2>Member Directory</h2>
 
@@ -98,7 +97,6 @@
       </div>
     </section>
 
-    <!-- Members Container -->
     <section id="members-container" class="grid-view" aria-live="polite">
       <h2 class="visually-hidden">Members List</h2>
     </section>
