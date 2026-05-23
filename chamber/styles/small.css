@@ -619,8 +619,8 @@ footer p {
   clip-path: inset(50%) !important;
   white-space: nowrap !important;
   border: 0 !important;
-  color: transparent !important;
-  background-color: transparent !important;
+  color:  #00ff00 !important;
+  background-color: #ffffff !important;
   opacity: 0 !important;
   pointer-events: none !important;
 }
