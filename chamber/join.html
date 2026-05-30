@@ -64,12 +64,12 @@
 
   <main>
 
-    <!-- 1. PAGE TITLE -->
+    
     <section>
       <h1>Join the Salt Lake City Chamber</h1>
     </section>
 
-    <!-- 2. MEMBERSHIP LEVELS -->
+    
     <section class="membership-section">
 
       <h2>Membership Levels</h2>
@@ -100,50 +100,42 @@
 
     </section>
 
-    <!-- 3. APPLICATION FORM -->
+    
     <section class="join-form-section">
 
       <h2>Apply for Membership</h2>
 
       <form id="join-form" method="get" action="thankyou.html">
 
-        <label>First Name:
-          <input type="text" name="firstName" required>
-        </label>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" type="text" name="firstName" required>
 
-        <label>Last Name:
-          <input type="text" name="lastName" required>
-        </label>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" type="text" name="lastName" required>
 
-        <label>Business / Organization Name:
-          <input type="text" name="organization" required>
-        </label>
+        <label for="organization">Business / Organization Name:</label>
+        <input id="organization" type="text" name="organization" required>
 
-        <label>Title / Position:
-          <input type="text" name="title">
-        </label>
+        <label for="title">Title / Position:</label>
+        <input id="title" type="text" name="title">
 
-        <label>Email:
-          <input type="email" name="email" required>
-        </label>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" required>
 
-        <label>Phone:
-          <input type="tel" name="phone" required>
-        </label>
+        <label for="phone">Phone:</label>
+        <input id="phone" type="tel" name="phone" required>
 
-        <label>Business Description:
-          <textarea name="description" rows="4" required></textarea>
-        </label>
+        <label for="description">Business Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
 
-        <label>Membership Level:
-          <select name="membership" required>
-            <option value="">Select a level</option>
-            <option value="np">NP Membership</option>
-            <option value="bronze">Bronze Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-          </select>
-        </label>
+        <label for="membership">Membership Level:</label>
+        <select id="membership" name="membership" required>
+          <option value="">Select a level</option>
+          <option value="1">NP Membership</option>
+          <option value="1">Bronze Membership</option>
+          <option value="2">Silver Membership</option>
+          <option value="3">Gold Membership</option>
+        </select>
 
         <input type="hidden" id="timestamp" name="timestamp">
 

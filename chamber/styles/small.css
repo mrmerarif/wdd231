@@ -228,7 +228,6 @@ nav ul li a:hover,
   box-shadow: var(--shadow-style);
 }
 
-
 .community-section h2 {
   text-align: center;
   margin-bottom: 0.75rem;
@@ -274,6 +273,26 @@ nav ul li a:hover,
 }
 
 .weather-data p {
+  margin: 0.25rem 0;
+}
+
+/* FORECAST (ADDED) */
+.forecast {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.forecast h4 {
+  margin-bottom: 0.5rem;
+}
+
+#forecast-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#forecast-list li {
   margin: 0.25rem 0;
 }
 
@@ -387,8 +406,6 @@ section p {
   margin-bottom: 1rem;
 }
 
-
-
 /* Desktop layout */
 @media (min-width: 768px) {
   .discover-layout {
@@ -464,7 +481,7 @@ section p {
   .discover-gallery h2 {
     grid-column: 1 / -1;
   }
-} 
+}
 
 /* JOIN PAGE: MEMBERSHIP ROW + FORM */
 .membership-heading {

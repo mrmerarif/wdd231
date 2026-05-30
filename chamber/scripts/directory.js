@@ -110,18 +110,25 @@ function createMemberRow(member) {
 // Display GRID View
 // ===============================
 function displayGridView() {
+  if (!container) return;
+
   const fragment = document.createDocumentFragment();
 
   membersData.forEach((member) => {
     fragment.appendChild(createMemberCard(member));
   });
 
-  container.innerHTML = ""; 
+  container.innerHTML = "";
   container.classList.remove("list-view");
   container.classList.add("grid-view");
 
-  document.getElementById("grid-view").classList.add("active-view");
-  document.getElementById("list-view").classList.remove("active-view");
+  const gridBtn = document.getElementById("grid-view");
+  const listBtn = document.getElementById("list-view");
+
+  if (gridBtn && listBtn) {
+    gridBtn.classList.add("active-view");
+    listBtn.classList.remove("active-view");
+  }
 
   container.appendChild(fragment);
 }
@@ -130,18 +137,25 @@ function displayGridView() {
 // Display LIST View
 // ===============================
 function displayListView() {
+  if (!container) return;
+
   const fragment = document.createDocumentFragment();
 
   membersData.forEach((member) => {
     fragment.appendChild(createMemberRow(member));
   });
 
-  container.innerHTML = ""; 
+  container.innerHTML = "";
   container.classList.remove("grid-view");
   container.classList.add("list-view");
 
-  document.getElementById("list-view").classList.add("active-view");
-  document.getElementById("grid-view").classList.remove("active-view");
+  const gridBtn = document.getElementById("grid-view");
+  const listBtn = document.getElementById("list-view");
+
+  if (gridBtn && listBtn) {
+    listBtn.classList.add("active-view");
+    gridBtn.classList.remove("active-view");
+  }
 
   container.appendChild(fragment);
 }
@@ -149,10 +163,15 @@ function displayListView() {
 // ===============================
 // Event Listeners
 // ===============================
-document.getElementById("grid-view").addEventListener("click", displayGridView);
-document.getElementById("list-view").addEventListener("click", displayListView);
+const gridButton = document.getElementById("grid-view");
+const listButton = document.getElementById("list-view");
 
-// ===============================
-// Load Members on Page Load
-// ===============================
-getMembers();
+if (container && gridButton && listButton) {
+  gridButton.addEventListener("click", displayGridView);
+  listButton.addEventListener("click", displayListView);
+
+  // ===============================
+  // Load Members on Page Load
+  // ===============================
+  getMembers();
+}
