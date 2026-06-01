@@ -213,3 +213,49 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* Modal dialog */
+dialog#course-details {
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.35);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+dialog#course-details h2 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+dialog#course-details h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+}
+
+dialog#course-details p {
+  margin: 0.25rem 0;
+}
+
+dialog#course-details button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgb(0 0 0 / 10%);
+  background-color: #f9fafb;
+  cursor: pointer;
+}
+
+dialog#course-details button:hover {
+  background-color: #e5e7eb;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 50%);
+}

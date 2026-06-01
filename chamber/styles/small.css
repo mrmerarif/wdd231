@@ -663,3 +663,45 @@ img {
     background-position: -200% 0;
   }
 }
+
+
+/* JOIN PAGE: membership cards intro animation */
+.membership-row {
+  animation: membership-intro 0.9s ease-out;
+}
+
+@keyframes membership-intro {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* JOIN PAGE: modal styling */
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-style);
+  max-width: 500px;
+  margin: auto;
+  background-color: var(--white-color);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+dialog p {
+  color: var(--text-color);
+  line-height: 1.5;
+}

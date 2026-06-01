@@ -75,26 +75,59 @@
         <div class="level-card">
           <h3>NP Membership</h3>
           <p>For non-profit organizations. Includes directory listing and event access.</p>
+          <button type="button" class="view-button" data-level="np">Learn More</button>
         </div>
 
         <div class="level-card">
           <h3>Bronze Membership</h3>
           <p>Includes directory listing, event access, and basic advertising opportunities.</p>
+          <button type="button" class="view-button" data-level="bronze">Learn More</button>
         </div>
 
         <div class="level-card">
           <h3>Silver Membership</h3>
           <p>Includes all Bronze benefits plus enhanced advertising and networking perks.</p>
+          <button type="button" class="view-button" data-level="silver">Learn More</button>
         </div>
 
         <div class="level-card">
           <h3>Gold Membership</h3>
           <p>Includes all Silver benefits plus premium placement and sponsorship options.</p>
+          <button type="button" class="view-button" data-level="gold">Learn More</button>
         </div>
 
       </div>
 
     </section>
+
+    <!-- Membership Modals -->
+    <dialog id="np-modal">
+      <h3>NP Membership Benefits</h3>
+      <p>Designed for non-profit organizations with no membership fee. Includes directory listing, access to community events, and basic networking opportunities.</p>
+      <p>Perfect for organizations focused on community impact and visibility.</p>
+      <button type="button" class="secondary-button" data-close-modal>Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+      <h3>Bronze Membership Benefits</h3>
+      <p>Includes NP benefits plus additional exposure through our online directory and select event promotions.</p>
+      <p>Ideal for small businesses starting to grow their local presence.</p>
+      <button type="button" class="secondary-button" data-close-modal>Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+      <h3>Silver Membership Benefits</h3>
+      <p>Includes all Bronze benefits plus enhanced advertising, featured directory placement, and invitations to member-only trainings.</p>
+      <p>Great for businesses looking to expand their network and visibility.</p>
+      <button type="button" class="secondary-button" data-close-modal>Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+      <h3>Gold Membership Benefits</h3>
+      <p>Includes all Silver benefits plus premium homepage spotlight positions, sponsorship opportunities, and priority event access.</p>
+      <p>Best for organizations seeking maximum exposure and leadership in the community.</p>
+      <button type="button" class="secondary-button" data-close-modal>Close</button>
+    </dialog>
 
     <section class="join-form-section">
 
@@ -102,40 +135,101 @@
 
       <form id="join-form" method="get" action="thankyou.html">
 
-        <label for="firstName">First Name:</label>
-        <input id="firstName" type="text" name="firstName" required>
+        <label>
+          First Name:
+          <input
+            id="firstName"
+            type="text"
+            name="firstName"
+            required
+            title="Enter your first name"
+            autocomplete="given-name">
+        </label>
 
-        <label for="lastName">Last Name:</label>
-        <input id="lastName" type="text" name="lastName" required>
+        <label>
+          Last Name:
+          <input
+            id="lastName"
+            type="text"
+            name="lastName"
+            required
+            title="Enter your last name"
+            autocomplete="family-name">
+        </label>
 
-        <label for="organization">Business / Organization Name:</label>
-        <input id="organization" type="text" name="organization" required>
+        <label>
+          Business / Organization Name:
+          <input
+            id="organization"
+            type="text"
+            name="organization"
+            required
+            title="Enter your business or organization name"
+            autocomplete="organization">
+        </label>
 
-        <label for="title">Title / Position:</label>
-        <input id="title" type="text" name="title">
+        <label>
+          Title / Position:
+          <input
+            id="title"
+            type="text"
+            name="title"
+            title="Enter your title or position within the organization"
+            autocomplete="organization-title"
+            pattern="[A-Za-z\s\-]{7,}">
+        </label>
 
-        <label for="email">Email:</label>
-        <input id="email" type="email" name="email" required>
+        <label>
+          Email:
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            title="Enter a valid email address"
+            autocomplete="email"
+            placeholder="name@example.com">
+        </label>
 
-        <label for="phone">Phone:</label>
-        <input id="phone" type="tel" name="phone" required>
+        <label>
+          Mobile Phone:
+          <input
+            id="phone"
+            type="tel"
+            name="phone"
+            required
+            title="Enter your mobile phone number"
+            autocomplete="tel">
+        </label>
 
-        <label for="description">Business Description:</label>
-        <textarea id="description" name="description" rows="4" required></textarea>
+        <label>
+          Business Description:
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            title="Describe your business or organization"></textarea>
+        </label>
 
-        <label for="membership">Membership Level:</label>
-        <select id="membership" name="membership" required>
-          <option value="">Select a level</option>
-          <option value="1">NP Membership</option>
-          <option value="1">Bronze Membership</option>
-          <option value="2">Silver Membership</option>
-          <option value="3">Gold Membership</option>
-        </select>
+        <label>
+          Membership Level:
+          <select
+            id="membership"
+            name="membership"
+            required
+            title="Select a membership level">
+            <option value="">Select a level</option>
+            <option value="np">NP Membership (Non-profit, no fee)</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
 
         <input type="hidden" id="timestamp" name="timestamp">
 
         <button type="submit" class="primary-button">
-          Submit Application
+          Membership Application
         </button>
 
       </form>

@@ -40,7 +40,7 @@
       <p>Membership Confirmation</p>
     </div>
 
-    <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    <button id="menu-toggle" type="button" aria-label="Toggle navigation menu">☰</button>
 
     <nav id="main-nav">
       <ul>
@@ -87,7 +87,7 @@
     </section>
 
     <section class="footer-meta">
-      <p>&copy; <span id="current-year"></span> Salt Lake City Chamber of Commerce</span></p>
+      <p>&copy; <span id="current-year"></span> Salt Lake City Chamber of Commerce</p>
       <p>WDD 231 | <span id="last-modified"></span></p>
       <p>Created by Merari Flores</p>
     </section>
@@ -97,13 +97,22 @@
     const params = new URLSearchParams(window.location.search);
     const output = document.getElementById("submitted-data");
 
+    const firstName = params.get("firstName") || "";
+    const lastName = params.get("lastName") || "";
+    const email = params.get("email") || "";
+    const phone = params.get("phone") || "";
+    const organization = params.get("organization") || "";
+    const timestamp = params.get("timestamp") || "";
+
     let html = "<ul>";
-
-    params.forEach((value, key) => {
-      html += `<li><strong>${key}:</strong> ${value}</li>`;
-    });
-
+    html += `<li><strong>First Name:</strong> ${firstName}</li>`;
+    html += `<li><strong>Last Name:</strong> ${lastName}</li>`;
+    html += `<li><strong>Email:</strong> ${email}</li>`;
+    html += `<li><strong>Mobile Phone:</strong> ${phone}</li>`;
+    html += `<li><strong>Business / Organization:</strong> ${organization}</li>`;
+    html += `<li><strong>Submitted At:</strong> ${timestamp}</li>`;
     html += "</ul>";
+
     output.innerHTML = html;
   </script>
 

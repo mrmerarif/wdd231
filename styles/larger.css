@@ -98,4 +98,18 @@
     width: 32px;
     height: 32px;
   }
+
+  /* Modal dialog (desktop enhancements) */
+  dialog#course-details {
+    max-width: 650px;
+    padding: 2rem;
+    border-radius: 0.75rem;
+  }
+
+  dialog#course-details button {
+    top: 20px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+  }
+
 }
