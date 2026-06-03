@@ -30,14 +30,13 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 
-  <script src="scripts/discover.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
   <script src="scripts/global.js" defer></script>
 </head>
 
 <body>
 
   <header>
-
     <div class="branding">
       <h2>Salt Lake City Chamber of Commerce</h2>
       <p>Discover Salt Lake City</p>
@@ -55,10 +54,9 @@
         <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
-
   </header>
 
-  <main>
+  <main id="discover-main">
 
     <section>
       <h1>Discover Salt Lake City</h1>
@@ -69,75 +67,91 @@
       <p id="visit-message">Loading...</p>
     </section>
 
-    <section class="discover-intro">
-      <h2>Explore Salt Lake City</h2>
+    <!-- THREE-COLUMN DISCOVER LAYOUT -->
+    <section class="discover-layout">
 
-      <p>
-        Salt Lake City is known for its beautiful mountains,
-        vibrant downtown, and rich cultural history.
-        Explore some of the highlights below.
-      </p>
+      <section class="discover-intro">
+        <h2>Explore Salt Lake City</h2>
+        <p>Salt Lake City is known for its beautiful mountains,
+          vibrant downtown, and rich cultural history.
+          Explore some of the highlights below.</p>
 
-      <h3>Local History</h3>
+        <h3>Local History</h3>
+        <p>Founded in 1847, Salt Lake City has grown into a
+          thriving metropolitan area known for its cultural
+          heritage, outdoor recreation, and innovation.</p>
+      </section>
 
-      <p>
-        Founded in 1847, Salt Lake City has grown into a
-        thriving metropolitan area known for its cultural
-        heritage, outdoor recreation, and innovation.
-      </p>
+      <section class="discover-demographics">
+        <h2>Demographics</h2>
+        <div class="demographics-grid">
+          <div class="demo-card"><strong>Population</strong><br>205,000+</div>
+          <div class="demo-card"><strong>Median Age</strong><br>32.4</div>
+          <div class="demo-card"><strong>Income</strong><br>$80,196</div>
+          <div class="demo-card"><strong>Diversity</strong><br>67%</div>
+          <div class="demo-card"><strong>Housing</strong><br>90,000+</div>
+        </div>
+      </section>
+
+      <section class="discover-events">
+        <h2>Current Events</h2>
+        <ul>
+          <li><strong>Summer Concert Series</strong> – June 15</li>
+          <li><strong>Farmers Market Opening</strong> – June 20</li>
+          <li><strong>Art in the Park</strong> – July 3</li>
+        </ul>
+      </section>
+
     </section>
 
-    <section class="discover-demographics">
-      <h2>Demographics</h2>
-
-      <div class="demographics-grid">
-
-        <div class="demo-card"><strong>Population</strong><br>205,000+</div>
-        <div class="demo-card"><strong>Median Age</strong><br>32.4</div>
-        <div class="demo-card"><strong>Income</strong><br>$80,196</div>
-        <div class="demo-card"><strong>Diversity</strong><br>67%</div>
-        <div class="demo-card"><strong>Housing</strong><br>90,000+</div>
-
-      </div>
+    <!-- ATTRACTIONS -->
+    <section class="discover-attractions">
+      <h2>Local Attractions</h2>
+      <div id="attraction-grid" class="attraction-grid"></div>
     </section>
 
-    <section class="discover-events">
-      <h2>Current Events</h2>
-
-      <ul>
-        <li><strong>Summer Concert Series</strong> – June 15</li>
-        <li><strong>Farmers Market Opening</strong> – June 20</li>
-        <li><strong>Art in the Park</strong> – July 3</li>
-      </ul>
-    </section>
-
+    <!-- GALLERY -->
     <section class="discover-gallery">
       <h2>Photo Gallery</h2>
 
       <figure>
-        <img src="images/temple.webp" alt="Temple Square at Christmas" loading="lazy">
+        <img class="gallery-img" src="images/temple.webp" alt="Temple Square at Christmas" width="400" height="300" loading="lazy">
         <figcaption>Temple Square at Christmas</figcaption>
       </figure>
 
       <figure>
-        <img src="images/attraction.webp" alt="Hill Aerospace Museum airplane" loading="lazy">
+        <img class="gallery-img" src="images/attraction.webp" alt="Hill Aerospace Museum airplane" width="400" height="300" loading="lazy">
         <figcaption>Hill Aerospace Museum</figcaption>
       </figure>
 
       <figure>
-        <img src="images/magna.webp" alt="Salt Lake Valley view from Magna Cemetery" loading="lazy">
+        <img class="gallery-img" src="images/magna.webp" alt="Salt Lake Valley view from Magna Cemetery" width="400" height="300" loading="lazy">
         <figcaption>View from Magna Cemetery</figcaption>
       </figure>
 
     </section>
 
+    <!-- MODAL -->
+    <div id="attraction-modal" class="modal">
+      <div class="modal-content">
+        <span id="modal-close" class="close">&times;</span>
+
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <address id="modal-address"></address>
+        <p id="modal-cost"></p>
+        <p id="modal-hours"></p>
+        <p id="modal-phone"></p>
+        <p><a id="modal-website" href="#" target="_blank">Visit Website</a></p>
+
+      </div>
+    </div>
+
   </main>
 
   <footer>
-
     <section class="footer-contact">
       <p class="visually-hidden">Contact Information</p>
-
       <p><strong>Salt Lake City Chamber of Commerce</strong></p>
       <p>Salt Lake City, Utah</p>
       <p>Email: info@slcchamber.org</p>
@@ -146,12 +160,10 @@
 
     <section class="footer-meta">
       <p class="visually-hidden">Site Information</p>
-
       <p>&copy; <span id="current-year"></span> Salt Lake City Chamber</p>
       <p>WDD 231 | <span id="last-modified"></span></p>
       <p>Created by Merari Flores</p>
     </section>
-
   </footer>
 
 </body>

@@ -416,6 +416,70 @@ section p {
   }
 }
 
+/* LOCAL ATTRACTIONS GRID + CARDS */
+.attraction-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.attraction-card {
+  background-color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-style);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "name"
+    "photo"
+    "description"
+    "location"
+    "button";
+  gap: 0.75rem;
+  box-sizing: border-box;
+}
+
+.attraction-card h2 {
+  grid-area: name;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.attraction-card figure {
+  grid-area: photo;
+  margin: 0;
+}
+
+.attraction-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.attraction-card p {
+  grid-area: description;
+  margin: 0;
+  text-align: left;
+}
+
+.attraction-card address {
+  grid-area: location;
+  font-style: normal;
+  margin: 0;
+  text-align: left;
+}
+
+.attraction-card .learn-more {
+  grid-area: button;
+  justify-self: flex-start;
+  margin-top: 0.25rem;
+}
+
 /* PHOTO GALLERY */
 .discover-gallery {
   display: grid;
@@ -480,6 +544,21 @@ section p {
 
   .discover-gallery h2 {
     grid-column: 1 / -1;
+  }
+
+  /* attractions: single column on mobile */
+  .attraction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .attraction-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "photo"
+      "description"
+      "location"
+      "button";
   }
 }
 
@@ -605,6 +684,21 @@ section p {
   }
 }
 
+/* DESKTOP-ONLY HOVER EFFECT FOR GALLERY IMAGES */
+@media (min-width: 1024px) {
+  .attraction-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+  }
+}
+
 /* FOOTER */
 footer {
   background-color: var(--primary-color);
@@ -664,4 +758,112 @@ img {
   }
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: var(--white-color);
+  margin: 10% auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow-style);
+  text-align: left;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .attraction-card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "photo name"
+      "photo description"
+      "photo location"
+      "photo button";
+  }
+}
+
+
+/* TABLET LAYOUT — 2 COLUMN ATTRACTION CARDS */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .attraction-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "photo name"
+      "photo description"
+      "photo location"
+      "photo button";
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .attraction-card h2 {
+    grid-area: name;
+  }
+
+  .attraction-card figure {
+    grid-area: photo;
+  }
+
+  .attraction-card p {
+    grid-area: description;
+  }
+
+  .attraction-card address {
+    grid-area: location;
+  }
+
+  .attraction-card .learn-more {
+    grid-area: button;
+    justify-self: start;
+  }
+}
+
+
+
+/* MODAL FOR ATTRACTIONS */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: var(--white-color);
+  margin: 10% auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow-style);
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--accent-color);
+}
 
