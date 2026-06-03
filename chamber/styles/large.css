@@ -73,9 +73,6 @@
 
 
 /* JOIN PAGE: membership cards intro animation for (desktop) */
-.membership-row {
-  animation: membership-intro 0.9s ease-out;
-}
 
 @keyframes membership-intro {
   0% {
