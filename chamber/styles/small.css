@@ -839,3 +839,23 @@ img {
     justify-self: start;
   }
 }
+
+/*  CTA BUTTON TO SITE CTA STYLE */
+.learn-more {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.learn-more:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  transform: translateY(-2px);
+}
