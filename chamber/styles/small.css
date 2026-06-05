@@ -586,6 +586,8 @@ section p {
   box-shadow: var(--shadow-style);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: cardFadeIn 0.8s ease-out forwards;
+  opacity: 0;
 }
 
 .level-card:hover {
@@ -858,4 +860,16 @@ img {
   background-color: var(--secondary-color);
   color: var(--white-color);
   transform: translateY(-2px);
+}
+
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
