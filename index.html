@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<<<<<<< HEAD
   <title>WDD 231 – Course Home Page | Merari Flores</title>
   <meta name="description" content="Explore my WDD 231 course homepage featuring my web development progress, certificate courses, resources, and personal introduction.">
   <meta name="author" content="Merari Flores">
@@ -35,10 +36,40 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Merari Flores Web Development">
   <meta property="og:locale" content="en_US">
+=======
+  <title>5–10 Ingredient Meals | Home</title>
+  <meta name="description" content="Discover simple, budget-friendly recipes with only 5–10 ingredients. Perfect for busy families and real life.">
+  <meta name="author" content="Merari Flores">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="5–10 Ingredient Meals | Home">
+  <meta property="og:description" content="Quick, affordable recipes using 5–10 ingredients.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-meal.webp">
+  <meta property="og:url" content="https://mrmerarif.github.io/wdd231/finalproject/index.html">
+  <meta property="og:site_name" content="5–10 Ingredient Meals">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width:48rem)">
+
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+
+  <link rel="icon" href="favicon.ico">
+>>>>>>> 6545a3e (Clean finalproject structure)
 </head>
 
 <body>
   <header>
+<<<<<<< HEAD
     <div class="branding">
       <img src="images/logo.svg" alt="Site logo" width="48" height="48" fetchpriority="high">
       <span class="site-name">Merari Flores</span>
@@ -50,10 +81,25 @@
       <a href="index.html" class="active">Home</a>
       <a href="chamber/">Chamber</a>
       <a href="final/">Final</a>
+=======
+    <div class="header-content">
+      <h1>5–10 Ingredient Meals</h1>
+      <p>Simple, budget-friendly recipes anyone can make</p>
+    </div>
+
+    <nav id="main-nav">
+      <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html" class="active-link" aria-current="page">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+>>>>>>> 6545a3e (Clean finalproject structure)
     </nav>
   </header>
 
   <main>
+<<<<<<< HEAD
     <h1>Home</h1>
 
     <section class="about-photo">
@@ -116,3 +162,54 @@
   </footer>
 </body>
 </html>
+=======
+    <section class="hero">
+      <img
+        src="images/simple-veggie-pasta-small.webp"
+        alt="Healthy meal with fresh ingredients"
+        width="1600"
+        height="900"
+        loading="lazy"
+      >
+      <div class="hero-text">
+        <h2>Quick, affordable dishes with clear steps</h2>
+        <p>Perfect for busy days, tight budgets, and real life.</p>
+      </div>
+    </section>
+
+    <section class="scenarios">
+      <h2>What You'll Find Here</h2>
+      <ul>
+        <li>Ideas for meals with ingredients you already have at home.</li>
+        <li>Budget-friendly recipes for families.</li>
+        <li>A form to share your own recipes.</li>
+        <li>Quick meal ideas ready in under 20 minutes.</li>
+      </ul>
+    </section>
+
+    <section class="featured-recipes">
+      <h2>Featured Recipes</h2>
+      <div id="recipes-container" class="recipe-grid">
+        <!-- JavaScript will dynamically insert recipes here -->
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About 5–10 Ingredient Meals</h2>
+      <p>
+        Our mission is to make cooking simple, affordable, and fun.
+        Every recipe uses real ingredients, clear steps, and minimal prep —
+        perfect for busy families and real life.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="current-year"></span> Merari Flores – Utah, USA</p>
+    <p id="last-modified"></p>
+    <p><a href="attributions.html">References & Credits</a></p>
+    <p><a href="video-demo.html">Project Video Demo</a></p>
+  </footer>
+</body>
+</html>
+>>>>>>> 6545a3e (Clean finalproject structure)

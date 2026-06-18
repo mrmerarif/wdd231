@@ -1,0 +1,57 @@
+[
+    {
+      "title": "Creamy Tuscan Chicken",
+      "image": "images/tuscan-chicken.webp",
+      "description": "Juicy chicken in a creamy garlic sauce with spinach and sun-dried tomatoes.",
+      "ingredients": [
+        "Chicken breasts",
+        "Garlic",
+        "Spinach",
+        "Sun-dried tomatoes",
+        "Heavy cream"
+      ],
+      "steps": [
+        "Season and sear chicken until golden.",
+        "Add garlic, cream, and sun-dried tomatoes.",
+        "Simmer until sauce thickens.",
+        "Stir in spinach and serve hot."
+      ]
+    },
+    {
+      "title": "Garlic Butter Shrimp",
+      "image": "images/garlic-shrimp.webp",
+      "description": "Quick shrimp sautéed in garlic butter with lemon.",
+      "ingredients": [
+        "Shrimp",
+        "Garlic",
+        "Butter",
+        "Lemon juice",
+        "Parsley"
+      ],
+      "steps": [
+        "Melt butter in skillet.",
+        "Add garlic and sauté briefly.",
+        "Add shrimp and cook until pink.",
+        "Finish with lemon juice and parsley."
+      ]
+    },
+    {
+      "title": "Honey Garlic Chicken",
+      "image": "images/honey-chicken.webp",
+      "description": "Sweet and savory chicken glazed with honey garlic sauce.",
+      "ingredients": [
+        "Chicken thighs",
+        "Garlic",
+        "Soy sauce",
+        "Honey",
+        "Sesame seeds"
+      ],
+      "steps": [
+        "Sear chicken until browned.",
+        "Add garlic, soy sauce, and honey.",
+        "Simmer until chicken is glazed.",
+        "Sprinkle sesame seeds before serving."
+      ]
+    }
+  ]
+  

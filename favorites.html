@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Favorites | 5–10 Ingredient Meals</title>
+  <meta name="description" content="View your saved favorite recipes from 5–10 Ingredient Meals.">
+  <meta name="author" content="Merari Flores">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css" media="(min-width:48rem)">
+
+  
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/dates.js" defer></script>
+  <script type="module" src="scripts/favorites.js" defer></script>
+
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <h1>5–10 Ingredient Meals</h1>
+      <p>Simple, budget-friendly recipes anyone can make</p>
+    </div>
+
+    <nav id="main-nav">
+      <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="favorites.html" class="active-link" aria-current="page">Favorites</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="favorites-page">
+      <h2>Your Favorite Recipes</h2>
+      <p>Here are the recipes you’ve saved. Click “View Recipe” to see full details.</p>
+
+      <div id="favorites-container" class="recipe-grid">
+        
+      </div>
+
+      <button id="clear-favorites">Clear All Favorites</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="current-year"></span> Merari Flores – Utah, USA</p>
+    <p id="last-modified"></p>
+    <p><a href="attributions.html">References & Credits</a></p>
+    <p><a href="video-demo.html">Project Video Demo</a></p>
+  </footer>
+</body>
+</html>
