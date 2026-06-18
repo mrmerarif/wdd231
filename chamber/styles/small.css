@@ -873,3 +873,8 @@ img {
     transform: translateY(0);
   }
 }
+
+.error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}

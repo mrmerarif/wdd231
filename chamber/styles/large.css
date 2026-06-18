@@ -109,3 +109,8 @@ dialog p {
   color: var(--text-color);
   line-height: 1.5;
 }
+
+.error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
